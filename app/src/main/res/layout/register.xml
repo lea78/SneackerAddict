@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerInside"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="183dp"
+        android:layout_height="137dp"
+        android:layout_above="@+id/layout_register"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sneakers_addict_logo" />
+
+    <RelativeLayout
+        android:id="@+id/layout_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <EditText
+            android:id="@+id/text_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"/>
+
+        <EditText
+            android:id="@+id/text_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_username"
+            android:text="Mail"/>
+
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_mail"
+            android:text="Password"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
