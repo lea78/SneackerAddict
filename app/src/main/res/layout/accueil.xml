@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,11 +24,24 @@
         android:layout_marginStart="20dp"
         style="@style/titre_accueil"/>
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carousel"
+    <LinearLayout
+        android:id="@+id/container_slider"
+        android:layout_below="@+id/text_titre1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/text_titre1"/>
+        android:layout_marginStart="-50dp">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/artiste_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"/>
+
+    </LinearLayout>
+
+
+
 
 
 </RelativeLayout>
