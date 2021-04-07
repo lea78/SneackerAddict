@@ -11,6 +11,10 @@
         android:theme="@style/Theme.Sneaker_addict">
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+
+        </activity>
+        <activity android:name=".RecyclerViewProduits"
+            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
