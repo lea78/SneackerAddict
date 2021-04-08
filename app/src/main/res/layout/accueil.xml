@@ -68,6 +68,147 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/layout_accueil_informations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@+id/layout_derniere_crea"
+        android:background="@color/orange_app">
+
+        <LinearLayout
+            android:id="@+id/layout_ensemble_explications_1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_explication1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/logo_sneakers_explications2"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explication1"
+                    android:layout_marginStart="10dp"
+                    style="@style/text_explication_accueil"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_explication2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/logo_sneakers_explications2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explication2"
+                    android:layout_marginStart="10dp"
+                    style="@style/text_explication_accueil"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ensemble_explications_3_4"
+            android:layout_below="@+id/layout_ensemble_explications_1_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_explication3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/logo_sneakers_explications2"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explication3"
+                    android:layout_marginStart="10dp"
+                    style="@style/text_explication_accueil"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_explication4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/logo_sneakers_explications2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explication4"
+                    android:layout_marginStart="10dp"
+                    style="@style/text_explication_accueil"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_logo_rs"
+        android:layout_below="@id/layout_accueil_informations"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            style="@style/accueil_style_btn_rs"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:src="@drawable/facebook_resize"/>
+
+        <ImageButton
+            style="@style/accueil_style_btn_rs"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:src="@drawable/instagram_resize"/>
+
+        <ImageButton
+            style="@style/accueil_style_btn_rs"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:src="@drawable/twitter_resize"/>
+
+        <ImageButton
+            style="@style/accueil_style_btn_rs"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:src="@drawable/tiktok_resize" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>
 

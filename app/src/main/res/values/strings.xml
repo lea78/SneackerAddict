@@ -6,4 +6,24 @@
     <string name="derniere_crea_titre">Leurs dernières créations</string>
     <string name="accueil_titre_crea">Shoes in color</string>
     <string name="accueil_prix">120€</string>
+    <string name="explication1">
+        Prends contact avec le ou
+        les artistes qui te plaisent
+        via la messagerie.
+    </string>
+    <string name="explication2">
+        Echange avec ton ou tes
+        artistes sur les détailes de
+        ton projet.
+    </string>
+    <string name="explication3">
+        Commande tes sneakers
+        personnalisées via la
+        plateforme.
+    </string>
+    <string name="explication4">
+        Tu seras prévelé du montant
+        de la commande à réception
+        de cette dernière.
+    </string>
 </resources>
