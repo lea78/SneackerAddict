@@ -1,11 +1,8 @@
 package com.lea.sneaker_addict;
 
-
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,14 +37,13 @@ public class AdapterSliderArtiste extends RecyclerView.Adapter<AdapterSliderArti
 
     @Override
     public int getItemCount() {
-        return 0;
+        return helperSliderArtistesLocation.size();
     }
 
     public static class AdapterViewHolder extends RecyclerView.ViewHolder{
 
         ImageView image;
         TextView name;
-        Button button;
 
         public AdapterViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,7 +51,6 @@ public class AdapterSliderArtiste extends RecyclerView.Adapter<AdapterSliderArti
             //Hooks
             image = itemView.findViewById(R.id.artiste_image);
             name = itemView.findViewById(R.id.nom_artiste);
-            button = itemView.findViewById(R.id.button_voirplus);
         }
     }
 }

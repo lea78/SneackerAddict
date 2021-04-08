@@ -6,12 +6,12 @@ public class HelperSliderArtiste {
 
     int image;
     String artisteName;
-    Button buttonArtisteSlider;
+    //Button buttonArtisteSlider;
 
-    public HelperSliderArtiste(){
+    public HelperSliderArtiste(int image, String artisteName){
         this.image = image;
         this.artisteName = artisteName;
-        this.buttonArtisteSlider = buttonArtisteSlider;
+        //this.buttonArtisteSlider = buttonArtisteSlider;
     }
 
     public int getImage(){
@@ -22,7 +22,7 @@ public class HelperSliderArtiste {
         return artisteName;
     }
 
-    public Button getButtonArtisteSlider(){
+    /*public Button getButtonArtisteSlider(){
         return buttonArtisteSlider;
-    }
+    }*/
 }
