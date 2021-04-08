@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -25,21 +24,18 @@
         style="@style/titre_accueil"/>
 
     <LinearLayout
-        android:id="@+id/container_slider"
-        android:layout_below="@+id/text_titre1"
+        android:id="@+id/layout_slider_artiste"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="-50dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_titre1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_slider_artiste"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/artiste_slider"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="80dp"
-        android:paddingEnd="80dp"/>
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
-
 
 
 

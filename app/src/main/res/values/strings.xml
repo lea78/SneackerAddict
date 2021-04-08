@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Sneaker_addict</string>
     <string name="artiste_talent">Nos artistes ont du talent</string>
+    <string name="nom_artiste_sneakyboy">SneakyBoy</string>
+    <string name="voir_plus">voir plus</string>
 </resources>
