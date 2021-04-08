@@ -41,11 +41,14 @@
 
                 <TextView
                     android:id="@+id/nom_sneakers"
-                    android:layout_width="230dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_regular"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
                     android:text="Titre"
                     android:textSize="16sp"
                     android:textStyle="bold" />
