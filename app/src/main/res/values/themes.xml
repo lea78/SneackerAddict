@@ -34,6 +34,21 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="nom_artiste_accueil">
+        <item name="android:fontFamily">@font/mulish_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_accueil">
+        <item name="android:fontFamily">@font/mulish_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="prix_accueil">
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
 
 
 </resources>

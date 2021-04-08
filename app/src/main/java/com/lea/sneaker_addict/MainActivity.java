@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView artistesRecycler;
     RecyclerView.Adapter adapter;
 
+    RecyclerView basketRecycler;
+    RecyclerView.Adapter adapterBasket;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         artistesRecycler = findViewById(R.id.recycler_slider_artiste);
         mArtistesRecycler();
+
+        basketRecycler = findViewById(R.id.recycler_produits_baskets);
+        mBasketRecycler();
 
     }
 
@@ -38,5 +44,19 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new AdapterSliderArtiste(helperSliderArtistesLocation);
         artistesRecycler.setAdapter(adapter);
+    }
+
+    private void mBasketRecycler(){
+        basketRecycler.setHasFixedSize(true);
+        basketRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        ArrayList<HelperSliderBasket> helperSliderBaskets = new ArrayList<>();
+        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket1, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket2, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket3, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket4, "Shoes in color", "120€"));
+
+        adapterBasket = new AdapterSliderBasket(helperSliderBaskets);
+        basketRecycler.setAdapter(adapterBasket);
     }
 }

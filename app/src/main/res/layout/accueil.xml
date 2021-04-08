@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <SearchView
         android:id="@+id/search_bar"
@@ -38,7 +44,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layout_derniere_crea"
+        android:layout_below="@+id/layout_slider_artiste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/derniere_crea_titre"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            style="@style/titre_accueil"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_produits_baskets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
+
+</ScrollView>

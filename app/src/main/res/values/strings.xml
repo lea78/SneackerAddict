@@ -3,4 +3,7 @@
     <string name="artiste_talent">Nos artistes ont du talent</string>
     <string name="nom_artiste_sneakyboy">SneakyBoy</string>
     <string name="voir_plus">voir plus</string>
+    <string name="derniere_crea_titre">Leurs dernières créations</string>
+    <string name="accueil_titre_crea">Shoes in color</string>
+    <string name="accueil_prix">120€</string>
 </resources>

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/nom_artiste_sneakyboy"
             android:layout_marginStart="5dp"
-            android:textSize="12sp"/>
+            style="@style/nom_artiste_accueil"/>
 
         <Button
             android:id="@+id/button_voirplus"
