@@ -2,7 +2,6 @@ package com.lea.sneaker_addict;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -19,8 +18,10 @@ public class RecyclerViewProduits extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.produit_page);
 
+        //assign the layout recycler_produit to this recycler view
         recyclerItem = findViewById(R.id.recycler_produit);
 
+        //Get info from String arrays created in String.xml
         nomProd = getResources().getStringArray(R.array.creation_name);
         dscProd = getResources().getStringArray(R.array.description);
 
@@ -28,7 +29,6 @@ public class RecyclerViewProduits extends AppCompatActivity {
         GridLayoutManager gridLayoutManagerProduit = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false);
         recyclerItem.setLayoutManager(gridLayoutManagerProduit);
         recyclerItem.setAdapter(adapterProduit);
-        //recyclerItem.setLayoutManager(new LinearLayoutManager(this));
 
 
     }
