@@ -28,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_titre1">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_slider_artiste"
             android:layout_width="match_parent"
