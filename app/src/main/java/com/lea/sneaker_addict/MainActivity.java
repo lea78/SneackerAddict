@@ -1,11 +1,15 @@
 package com.lea.sneaker_addict;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -23,12 +27,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accueil_main);
 
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.accueil_bottomNav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+
+                    case R.id.menu_homepage :
+
+                        return true;
+                }
+                return true;
+            }
+        });
+
 
         artistesRecycler = findViewById(R.id.recycler_slider_artiste);
         mArtistesRecycler();
 
         basketRecycler = findViewById(R.id.recycler_produits_baskets);
         mBasketRecycler();
+
 
     }
 
