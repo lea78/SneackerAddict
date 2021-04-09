@@ -2,27 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/menu_homepage"
-        android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/bottom_nav_menu_home" />
 
     <item android:id="@+id/menu_produit"
-        android:enabled="true"
         android:icon="@drawable/logo_sneakers_menu"
         android:title="@string/bottom_nav_menu_product" />
 
     <item android:id="@+id/menu_favoris"
-        android:enabled="true"
         android:icon="@drawable/ic_baseline_favorite_border_24"
         android:title="@string/bottom_nav_menu_fav" />
 
     <item android:id="@+id/menu_message"
-        android:enabled="true"
         android:icon="@drawable/ic_baseline_mail_outline_24"
         android:title="@string/bottom_nav_menu_message" />
 
     <item android:id="@+id/menu_profil"
-        android:enabled="true"
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="@string/bottom_nav_menu_profil" />
 

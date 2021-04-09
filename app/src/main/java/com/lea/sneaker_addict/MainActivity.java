@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accueil);
+        setContentView(R.layout.accueil_main);
 
 
         artistesRecycler = findViewById(R.id.recycler_slider_artiste);
