@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Sneaker_addict</string>
+    <string name="nom_artiste">Nom de l\'artiste</string>
+    <string name="nom_produit">Nom du produit</string>
+    <string name="prix_article">Prix €</string>
 
     <string-array name="creation_name">
         <item>Template vide</item>
@@ -20,4 +23,5 @@
         <item>SneakyGirl</item>
         <item>SneakyGirl</item>
     </string-array>
+
 </resources>

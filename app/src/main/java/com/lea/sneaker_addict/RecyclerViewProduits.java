@@ -16,7 +16,7 @@ public class RecyclerViewProduits extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.produit_page);
+        setContentView(R.layout.tous_produits_page);
 
         //assign the layout recycler_produit to this recycler view
         recyclerItem = findViewById(R.id.recycler_produit);
