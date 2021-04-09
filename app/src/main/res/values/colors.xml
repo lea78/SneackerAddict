@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!--Charted colors-->
     <color name="orange">#FD8E10</color>
     <color name="blue">#1A7BEC</color>
     <color name= "blackDeep">#292F34</color>

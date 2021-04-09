@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Sneaker_addict</string>
+    
+    <!--HOME PAGE-->
     <string name="artiste_talent">Nos artistes ont du talent</string>
     <string name="nom_artiste_sneakyboy">SneakyBoy</string>
     <string name="voir_plus">voir plus</string>
@@ -26,4 +28,11 @@
         de la commande à réception
         de cette dernière.
     </string>
+    
+    <!--BOTTOM NAVIGATON VIEW-->
+    <string name="bottom_nav_menu_home">Accueil</string>
+    <string name="bottom_nav_menu_product">Produit</string>
+    <string name="bottom_nav_menu_fav">Favoris</string>
+    <string name="bottom_nav_menu_message">Messages</string>
+    <string name="bottom_nav_menu_profil">Profil</string>
 </resources>
