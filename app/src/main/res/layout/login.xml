@@ -8,18 +8,20 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="183dp"
-        android:layout_height="137dp"
-        android:layout_above="@id/layout_login"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/img_logo_login"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="100dp"
         android:src="@drawable/sneakers_addict_logo" />
 
     <RelativeLayout
         android:id="@+id/layout_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
+        android:layout_below="@+id/img_logo_login"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp">
 
@@ -28,7 +30,7 @@
             android:id="@+id/login_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:hint="Login"
             android:fontFamily="@font/poppins_regular"
             android:layout_marginBottom="20dp"/>
 
@@ -37,19 +39,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_edit"
-            android:text="Password"
+            android:hint="Password"
             android:fontFamily="@font/poppins_regular"/>
+
+        <TextView
+            android:id="@+id/text_mdp_oublie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_edit"
+            android:text="Mot de passe oublié?"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/poppins_light"
+            android:layout_marginTop="5dp"/>
+
 
         <Button
             android:id="@+id/button_connexion"
-            style="@style/styleSheetTry"
+            style="@style/button_orange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/password_edit"
+            android:layout_below="@+id/text_mdp_oublie"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:text="Connexion"
-            />
+            android:layout_marginTop="20dp"
+            android:text="Connexion" />
 
     </RelativeLayout>
 
@@ -57,10 +69,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_login"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
 
         <TextView
             android:id="@+id/text_compte"
@@ -70,12 +81,12 @@
             android:fontFamily="@font/poppins_regular"/>
 
         <TextView
+            android:id="@+id/text_to_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_compte"
-            android:onClick="#"
             android:text="Créer un compte"
-            android:fontFamily="@font/poppins_bold"/>
+            android:fontFamily="@font/poppins_bold" />
 
     </RelativeLayout>
 
