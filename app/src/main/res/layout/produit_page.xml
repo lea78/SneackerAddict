@@ -73,7 +73,10 @@
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
+
+        <!-- info produits nom+prix -->
      <LinearLayout
+         android:id="@+id/layout_nomprix_item"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:orientation="vertical"
@@ -89,6 +92,20 @@
              android:text="@string/prix_article"/>
      </LinearLayout>
 
+    <Spinner
+        android:id="@+id/spinner_sizesneaker"
+        android:layout_below="@id/layout_nomprix_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+        </LinearLayout>
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>
 
