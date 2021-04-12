@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -45,7 +46,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -53,22 +54,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/mulish_regular"
                         android:text="@string/nom_artiste"
-                        android:textSize="18sp"
+                        android:textColor="@color/blackDeep"
+                        style="@style/text_accueil"
                         app:layout_constraintStart_toEndOf="@+id/avatar_artiste_pg_prod"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <LinearLayout
+                    <RatingBar
                         android:id="@+id/layout_nb_etoile"
-                        android:layout_width="150dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/RatingBar"
+                        style="?android:attr/ratingBarStyleSmall"
                         android:layout_marginTop="5dp"
-                        android:orientation="horizontal"
+                        android:rating="4"
                         app:layout_constraintStart_toEndOf="@+id/avatar_artiste_pg_prod"
                         app:layout_constraintTop_toBottomOf="@+id/nom_artiste_pg_prod">
 
-                    </LinearLayout>
+                    </RatingBar>
                 </LinearLayout>
             </LinearLayout>
 
@@ -97,29 +100,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_slider_product"
-            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nom_produit" />
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/prix_article" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/titre_accueil"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/blackDeep"
+                    android:text="@string/nom_produit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/prix_accueil"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/blackDeep"
+                    android:text="@string/prix_article"
+                    android:textSize="20sp"/>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/layout_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
+                    style="@style/prix_accueil"
                     android:text="@string/taille" />
 
                 <Spinner
@@ -138,6 +160,7 @@
             android:layout_below="@+id/layout_info_product"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
             android:text="@string/acheter" />
 
     </RelativeLayout>
