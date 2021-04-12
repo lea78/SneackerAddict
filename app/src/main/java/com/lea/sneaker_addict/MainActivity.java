@@ -28,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accueil_main);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.accueil_bottomNav);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(R.id.menu_homepage);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
@@ -42,10 +44,9 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                 }
-                return true;
+                return false;
             }
         });
-
 
         artistesRecycler = findViewById(R.id.recycler_slider_artiste);
         mArtistesRecycler();
