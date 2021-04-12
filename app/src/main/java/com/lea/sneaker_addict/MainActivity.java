@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -34,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
+                        return true;
 
+                    case R.id.menu_produit:
+                        startActivity(new Intent(getApplicationContext(),RecyclerViewProduits.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return true;
