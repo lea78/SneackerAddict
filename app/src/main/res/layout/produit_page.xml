@@ -2,14 +2,13 @@
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/product_of_artist_page"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
     <!-- PRES ARTISTE CARD -->
     <androidx.cardview.widget.CardView
@@ -19,13 +18,19 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/avatar_artiste_pg_prod"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:scaleType="fitCenter"
                 android:src="@drawable/avatar_artiste"
+                android:layout_marginStart="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -68,15 +73,17 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_slider_item_artiste"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
+     </LinearLayout>
      <LinearLayout
+         android:id="@+id/layout_info_product"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:orientation="vertical"
+         android:layout_marginStart="20dp"
          android:layout_below="@+id/layout_slider_product">
 
          <TextView
@@ -87,7 +94,33 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:text="@string/prix_article"/>
+         <LinearLayout
+             android:id="@+id/layout_spinner"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="10dp"
+                 android:text="@string/taille"/>
+             <Spinner
+                 android:id="@+id/spinner_size"
+                 android:layout_width="300dp"
+                 android:layout_height="wrap_content"
+                 />
+         </LinearLayout>
+
+
      </LinearLayout>
+        <Button
+            android:id="@+id/button_acheter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acheter"
+            android:layout_below="@+id/layout_info_product"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>
