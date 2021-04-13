@@ -24,7 +24,7 @@ public class ProductPageActivity extends AppCompatActivity implements AdapterVie
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.component_productpage);
+        setContentView(R.layout.activity_productpage);
 
         //*****SPINNER*****//
         final Spinner spinner = (Spinner) findViewById(R.id.spinner_size);
