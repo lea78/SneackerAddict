@@ -1,4 +1,4 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,12 +9,14 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AdapterProduitPage extends RecyclerView.Adapter<AdapterProduitPage.MyViewHolder> {
+import com.lea.sneaker_addict.R;
+
+public class ProductPageAdapter extends RecyclerView.Adapter<ProductPageAdapter.MyViewHolder> {
 
     Context mycontext;
     int img[];
 
-    public AdapterProduitPage(Context context, int images[]) {
+    public ProductPageAdapter(Context context, int images[]) {
         mycontext = context;
         img = images;
     }
@@ -23,7 +25,7 @@ public class AdapterProduitPage extends RecyclerView.Adapter<AdapterProduitPage.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mycontext);
-        View myViewInflater = inflater.inflate(R.layout.pageproduit_sneaker_image, parent, false);
+        View myViewInflater = inflater.inflate(R.layout.item_productpage_imageshoes, parent, false);
         return new MyViewHolder(myViewInflater);
     }
 

@@ -1,4 +1,4 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,14 +7,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.lea.sneaker_addict.adapters.ProductPageAdapter;
+import com.lea.sneaker_addict.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProduitPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ProductPageActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     RecyclerView recyclerProduit;
     int images[]={R.drawable.page_produit_sneakers0, R.drawable.page_produit_sneakers1, R.drawable.page_produit_sneakers2};
@@ -22,7 +24,7 @@ public class ProduitPage extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.produit_page);
+        setContentView(R.layout.component_productpage);
 
         //*****SPINNER*****//
         final Spinner spinner = (Spinner) findViewById(R.id.spinner_size);
@@ -52,7 +54,7 @@ public class ProduitPage extends AppCompatActivity implements AdapterView.OnItem
         //assign the layout recycler_produit to this recycler view
         recyclerProduit = findViewById(R.id.recycler_slider_item_artiste);
 
-        AdapterProduitPage adapterProduit = new AdapterProduitPage(this,images);
+        ProductPageAdapter adapterProduit = new ProductPageAdapter(this,images);
         LinearLayoutManager gridLayoutManagerProduit = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerProduit.setLayoutManager(gridLayoutManagerProduit);
         recyclerProduit.setAdapter(adapterProduit);

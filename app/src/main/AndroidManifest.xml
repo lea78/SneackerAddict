@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
 
-        <activity android:name=".ProduitPage"
+        <activity android:name=".activities.ProductPageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <!--<activity android:name=".RecyclerViewProduits"
+        <!--<activity android:name=".AllProductsActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

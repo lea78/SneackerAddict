@@ -10,7 +10,7 @@
         android:id="@+id/includ_accueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        layout="@layout/accueil_contenu"
+        layout="@layout/component_homepage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_alignParentTop="true"

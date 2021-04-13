@@ -1,4 +1,4 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,13 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+import com.lea.sneaker_addict.R;
+
+public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.MyViewHolder> {
 
     String data1[], data2[];
     int img[];
     Context cont;
 
-    public MyAdapter (Context myCont, String nomItem[], String descItem[], int images[]){
+    public AllProductsAdapter(Context myCont, String nomItem[], String descItem[], int images[]){
         cont = myCont;
         data1 = nomItem;
         data2 = descItem;
@@ -28,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(cont);
-        View myViewInflater = inflater.inflate(R.layout.my_row, parent, false);
+        View myViewInflater = inflater.inflate(R.layout.component_allproducts, parent, false);
         return new MyViewHolder(myViewInflater);
     }
 

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_alignParentTop="false"
     android:scaleType="centerInside"
-    tools:context=".RecyclerViewProduits">
+    tools:context=".activities.AllProductsActivity">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

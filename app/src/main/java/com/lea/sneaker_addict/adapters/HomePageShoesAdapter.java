@@ -1,4 +1,4 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,26 +9,29 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lea.sneaker_addict.helpers.HomePageShoesHelper;
+import com.lea.sneaker_addict.R;
+
 import java.util.ArrayList;
 
-public class AdapterSliderBasket extends RecyclerView.Adapter<AdapterSliderBasket.AdapterViewHolder> {
-    ArrayList<HelperSliderBasket> helperSliderBasketsLocation;
+public class HomePageShoesAdapter extends RecyclerView.Adapter<HomePageShoesAdapter.AdapterViewHolder> {
+    ArrayList<HomePageShoesHelper> helperSliderBasketsLocation;
 
-    public AdapterSliderBasket(ArrayList<HelperSliderBasket> helperSliderBaskets){
+    public HomePageShoesAdapter(ArrayList<HomePageShoesHelper> helperSliderBaskets){
         this.helperSliderBasketsLocation = helperSliderBaskets;
     }
 
     @NonNull
     @Override
     public AdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View  view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.basketrecyclecard, parent, false);
+        View  view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_homepage_shoes_cardview, parent, false);
         AdapterViewHolder adapterViewHolder = new AdapterViewHolder(view);
         return adapterViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterViewHolder holder, int position) {
-        HelperSliderBasket helperSliderBasket = helperSliderBasketsLocation.get(position);
+        HomePageShoesHelper helperSliderBasket = helperSliderBasketsLocation.get(position);
         holder.image.setImageResource(helperSliderBasket.getImage());
         holder.titre.setText(helperSliderBasket.getTitre());
         holder.prix.setText(helperSliderBasket.getPrix());
