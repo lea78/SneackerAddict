@@ -1,15 +1,19 @@
 package com.lea.sneaker_addict.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lea.sneaker_addict.adapters.ProductPageAdapter;
 import com.lea.sneaker_addict.R;
 
@@ -25,6 +29,27 @@ public class ProductPageActivity extends AppCompatActivity implements AdapterVie
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productpage);
+
+        //*****BOTTOM NAVIGATION*****//
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(R.id.menu_produit);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.menu_homepage :
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.menu_produit:
+                        return true;
+                }
+                return false;
+            }
+        });
 
         //*****SPINNER*****//
         final Spinner spinner = (Spinner) findViewById(R.id.spinner_size);

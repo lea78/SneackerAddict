@@ -30,9 +30,9 @@ android {
         main {
             res {
                 srcDirs 'src/main/res',
-                        'src/main/res/layouts/activity/layout',
-                        'src/main/res/layouts/fragment/layout',
-                        'src/main/res/layouts/item/layout', 'src\\main\\res', 'src\\main\\res\\layouts\\activities', 'src\\main\\res\\layouts\\components', 'src\\main\\res\\layouts\\items'
+                        'src/main/res/layouts/activities',
+                        'src/main/res/layouts/components',
+                        'src/main/res/layouts/items'
             }
         }
     }

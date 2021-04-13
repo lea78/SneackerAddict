@@ -26,28 +26,6 @@ public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.
 
     }
 
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(cont);
-        View myViewInflater = inflater.inflate(R.layout.component_allproducts, parent, false);
-        return new MyViewHolder(myViewInflater);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.textName.setText(data1[position]);
-        holder.textDesc.setText(data2[position]);
-        holder.imgShoes.setImageResource(img[position]);
-
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return data1.length;
-    }
-
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView textName, textDesc;
@@ -60,4 +38,26 @@ public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.
 
         }
     }
+
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(cont);
+        View myViewInflater = inflater.inflate(R.layout.item_allproducts_cardview, parent, false);
+        return new MyViewHolder(myViewInflater);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.textName.setText(data1[position]);
+        holder.textDesc.setText(data2[position]);
+        holder.imgShoes.setImageResource(img[position]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return data1.length;
+    }
+
+
 }
