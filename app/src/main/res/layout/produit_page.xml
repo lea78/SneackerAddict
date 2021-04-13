@@ -47,6 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -57,6 +58,7 @@
                         android:text="@string/nom_artiste"
                         android:textColor="@color/blackDeep"
                         style="@style/text_accueil"
+                        android:textSize="20dp"
                         app:layout_constraintStart_toEndOf="@+id/avatar_artiste_pg_prod"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,10 +133,10 @@
 
             <LinearLayout
                 android:id="@+id/layout_spinner"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
@@ -142,11 +144,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     style="@style/prix_accueil"
+                    android:textSize="17dp"
                     android:text="@string/taille" />
 
                 <Spinner
                     android:id="@+id/spinner_size"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
