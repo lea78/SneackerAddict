@@ -1,11 +1,11 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.helpers;
 
-public class HelperSliderBasket {
+public class HomePageShoesHelper {
     int image;
     String titre;
     String prix;
 
-    public HelperSliderBasket(int image, String titre, String prix){
+    public HomePageShoesHelper(int image, String titre, String prix){
         this.image = image;
         this.titre = titre;
         this.prix = prix;

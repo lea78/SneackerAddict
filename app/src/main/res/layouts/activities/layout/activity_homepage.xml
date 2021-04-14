@@ -2,22 +2,20 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/produit_container"
+    android:id="@+id/accueil_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecyclerViewProduits">
+    android:layout_height="match_parent">
 
     <include
-        android:id="@+id/include_pageProduit"
+        android:id="@+id/includ_accueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        layout="@layout/tous_produits_page"
+        layout="@layout/component_homepage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_alignParentTop="true"
         android:layout_above="@+id/bottom_nav"
-        />
+         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"

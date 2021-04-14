@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_alignParentTop="false"
     android:scaleType="centerInside"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <ImageView
         android:id="@+id/img_logo_login"

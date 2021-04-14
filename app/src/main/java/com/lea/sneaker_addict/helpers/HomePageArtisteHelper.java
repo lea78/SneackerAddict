@@ -1,14 +1,14 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.helpers;
 
 import android.widget.Button;
 
-public class HelperSliderArtiste {
+public class HomePageArtisteHelper {
 
     int image;
     String artisteName;
     //Button buttonArtisteSlider;
 
-    public HelperSliderArtiste(int image, String artisteName){
+    public HomePageArtisteHelper(int image, String artisteName){
         this.image = image;
         this.artisteName = artisteName;
         //this.buttonArtisteSlider = buttonArtisteSlider;

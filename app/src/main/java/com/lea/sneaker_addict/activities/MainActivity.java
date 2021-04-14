@@ -1,16 +1,20 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.lea.sneaker_addict.adapters.HomePageArtisteAdapter;
+import com.lea.sneaker_addict.adapters.HomePageShoesAdapter;
+import com.lea.sneaker_addict.helpers.HomePageArtisteHelper;
+import com.lea.sneaker_addict.helpers.HomePageShoesHelper;
+import com.lea.sneaker_addict.R;
 
 import java.util.ArrayList;
 
@@ -26,22 +30,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accueil_main);
+        setContentView(R.layout.activity_homepage);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.menu_homepage);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
-                    case R.id.menu_homepage :
+                    case R.id.menu_homepage:
                         return true;
 
                     case R.id.menu_produit:
-                        startActivity(new Intent(getApplicationContext(),RecyclerViewProduits.class));
+                        startActivity(new Intent(getApplicationContext(), AllProductsActivity.class));
                         overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         return true;
                 }
                 return false;
@@ -58,30 +67,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //method to hook features in the recycler
-    private void mArtistesRecycler(){
+    private void mArtistesRecycler() {
         artistesRecycler.setHasFixedSize(true);
         artistesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        ArrayList<HelperSliderArtiste> helperSliderArtistesLocation = new ArrayList<>();
-        helperSliderArtistesLocation.add(new HelperSliderArtiste(R.drawable.artiste1, "SneakersAddict"));
-        helperSliderArtistesLocation.add(new HelperSliderArtiste(R.drawable.artiste2, "GirlWithShoes"));
-        helperSliderArtistesLocation.add(new HelperSliderArtiste(R.drawable.artiste3, "Tulip"));
+        ArrayList<HomePageArtisteHelper> helperSliderArtistesLocation = new ArrayList<>();
+        helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste1, "SneakersAddict"));
+        helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste2, "GirlWithShoes"));
+        helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste3, "Tulip"));
 
-        adapter = new AdapterSliderArtiste(helperSliderArtistesLocation);
+        adapter = new HomePageArtisteAdapter(helperSliderArtistesLocation);
         artistesRecycler.setAdapter(adapter);
     }
 
-    private void mBasketRecycler(){
+    private void mBasketRecycler() {
         basketRecycler.setHasFixedSize(true);
         basketRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        ArrayList<HelperSliderBasket> helperSliderBaskets = new ArrayList<>();
-        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket1, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket2, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket3, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HelperSliderBasket(R.drawable.accueil_basket4, "Shoes in color", "120€"));
+        ArrayList<HomePageShoesHelper> helperSliderBaskets = new ArrayList<>();
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket1, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket2, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket3, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket4, "Shoes in color", "120€"));
 
-        adapterBasket = new AdapterSliderBasket(helperSliderBaskets);
+        adapterBasket = new HomePageShoesAdapter(helperSliderBaskets);
         basketRecycler.setAdapter(adapterBasket);
     }
 }

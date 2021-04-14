@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">Sneaker_addict</string>
-    <string name="nom_artiste">Nom de l\'artiste</string>
-    <string name="nom_produit">Nom du produit</string>
-    <string name="prix_article">Prix €</string>
 
+    <!--PRODUCT PAGE-->
+    <string name="app_name">Sneaker_addict</string>
+    <string name="nom_artiste">SneakyGirl</string>
+    <string name="nom_produit">VANS Carpe Koï</string>
+    <string name="prix_article">120 €</string>
+    <string name="acheter">Acheter</string>
+    <string name="taille">Taille :</string>
+
+    <!--ALL THE PRODUCTS-->
     <string-array name="creation_name">
         <item>Template vide</item>
         <item>Naruto</item>
@@ -59,4 +64,6 @@
     <string name="bottom_nav_menu_fav">Favoris</string>
     <string name="bottom_nav_menu_message">Messages</string>
     <string name="bottom_nav_menu_profil">Profil</string>
+
+
 </resources>

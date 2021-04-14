@@ -1,4 +1,4 @@
-package com.lea.sneaker_addict;
+package com.lea.sneaker_addict.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.lea.sneaker_addict.adapters.AllProductsAdapter;
+import com.lea.sneaker_addict.R;
 
-public class RecyclerViewProduits extends AppCompatActivity {
+public class AllProductsActivity extends AppCompatActivity {
 
     RecyclerView recyclerItem;
     String nomProd[], dscProd[];
@@ -21,7 +23,7 @@ public class RecyclerViewProduits extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tous_les_produits_page_main);
+        setContentView(R.layout.activity_allproducts);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.menu_produit);
@@ -32,11 +34,15 @@ public class RecyclerViewProduits extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.menu_produit:
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         return true;
                 }
                 return false;
@@ -50,7 +56,7 @@ public class RecyclerViewProduits extends AppCompatActivity {
         nomProd = getResources().getStringArray(R.array.creation_name);
         dscProd = getResources().getStringArray(R.array.description);
 
-        MyAdapter adapterProduit = new MyAdapter(this,nomProd,dscProd,images);
+        AllProductsAdapter adapterProduit = new AllProductsAdapter(this,nomProd,dscProd,images);
         GridLayoutManager gridLayoutManagerProduit = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false);
         recyclerItem.setLayoutManager(gridLayoutManagerProduit);
         recyclerItem.setAdapter(adapterProduit);
