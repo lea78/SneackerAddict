@@ -18,7 +18,7 @@ public class AllProductsActivity extends AppCompatActivity {
     RecyclerView recyclerItem;
     String nomProd[], dscProd[];
     int images[]={R.drawable.air_force_1,R.drawable.naruto_akatsuki_converse,R.drawable.monopoly_stansmith,
-            R.drawable.pizza_vans,R.drawable.ananas,R.drawable.red_dragon_1,R.drawable.hokusai_force1};
+            R.drawable.pizza_vans,R.drawable.ananas,R.drawable.red_dragon_1,R.drawable.hokusai_force1, R.drawable.page_produit_sneakers0};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +60,6 @@ public class AllProductsActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManagerProduit = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false);
         recyclerItem.setLayoutManager(gridLayoutManagerProduit);
         recyclerItem.setAdapter(adapterProduit);
-
-
 
     }
 }

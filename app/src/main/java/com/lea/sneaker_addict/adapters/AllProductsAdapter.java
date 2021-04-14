@@ -37,6 +37,7 @@ public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.
             imgShoes = itemView.findViewById(R.id.img_sneakers);
 
         }
+        
     }
 
     @NonNull
