@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
-
         <activity android:name=".activities.MainActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
@@ -43,5 +42,8 @@
         </activity>
 
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
