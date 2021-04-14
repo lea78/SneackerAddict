@@ -57,6 +57,19 @@
         de la commande à réception
         de cette dernière.
     </string>
+
+    <!--PROFILE PAGE-->
+    <string name="btn_parameters">Paramètres</string>
+    <string name="btn_histo">Mes achats et ventes</string>
+    <string name="btn_add_product"> Ajouter une création</string>
+    <string name="btn_bundle">Envie de plus de visibilité</string>
+    <string name="btn_a_propos">A Propos</string>
+    <string name="btn_aide">Aide</string>
+
+    <!--Parameters section-->
+    <string name="titre_page_param">Paramètres</string>
+    <string name="titre_page_addprod">Ajouter une création</string>
+    <string name="modifier">Modifier</string>
     
     <!--BOTTOM NAVIGATON VIEW-->
     <string name="bottom_nav_menu_home">Accueil</string>
