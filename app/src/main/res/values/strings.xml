@@ -66,6 +66,7 @@
     <string name="bottom_nav_menu_fav">Favoris</string>
     <string name="bottom_nav_menu_message">Messages</string>
     <string name="bottom_nav_menu_profil">Profil</string>
+    <string name="adresse_livraison">adresse_livraison</string>
 
 
 </resources>
