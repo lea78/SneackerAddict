@@ -34,14 +34,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
-                    case R.id.menu_homepage :
+                    case R.id.menu_homepage:
                         return true;
 
                     case R.id.menu_produit:
-                        startActivity(new Intent(getApplicationContext(),RecyclerViewProduits.class));
+                        startActivity(new Intent(getApplicationContext(), RecyclerViewProduits.class));
                         overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         return true;
                 }
                 return false;
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //method to hook features in the recycler
-    private void mArtistesRecycler(){
+    private void mArtistesRecycler() {
         artistesRecycler.setHasFixedSize(true);
         artistesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
@@ -71,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         artistesRecycler.setAdapter(adapter);
     }
 
-    private void mBasketRecycler(){
+    private void mBasketRecycler() {
         basketRecycler.setHasFixedSize(true);
         basketRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
