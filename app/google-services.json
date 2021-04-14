@@ -14,14 +14,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "631356999761-3btf8mons5sifgactrv4blnruht1ibs2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.lea.sneaker_addict",
-            "certificate_hash": "27f76cba1366a257ffb1e410eb114951de93389a"
-          }
-        },
-        {
           "client_id": "631356999761-j56kjrjgstq12iqunl8m43m2sdbja0dr.apps.googleusercontent.com",
           "client_type": 3
         }

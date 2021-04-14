@@ -40,6 +40,10 @@ public class AllProductsActivity extends AppCompatActivity {
 
                     case R.id.menu_produit:
                         return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        return true;
                 }
                 return false;
             }
