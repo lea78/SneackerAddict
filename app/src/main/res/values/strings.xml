@@ -60,11 +60,8 @@
         de cette dernière.
     </string>
 
-    <string name="adresse_livraison_1">
+    <string name="adresse_livraison">
         2 Petre Melikishvili St.
-    </string>
-
-    <string name="adresse_livraison_2">
         0162, Tsibili
     </string>
 
