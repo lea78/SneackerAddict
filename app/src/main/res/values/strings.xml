@@ -31,7 +31,7 @@
         <item>SneakyGirl</item>
     </string-array>
 
-    
+
     <!--HOME PAGE-->
     <string name="artiste_talent">Nos artistes ont du talent</string>
     <string name="nom_artiste_sneakyboy">SneakyBoy</string>
@@ -59,14 +59,21 @@
         de la commande à réception
         de cette dernière.
     </string>
-    
+
+    <string name="adresse_livraison_1">
+        2 Petre Melikishvili St.
+    </string>
+
+    <string name="adresse_livraison_2">
+        0162, Tsibili
+    </string>
+
     <!--BOTTOM NAVIGATON VIEW-->
     <string name="bottom_nav_menu_home">Accueil</string>
     <string name="bottom_nav_menu_product">Produit</string>
     <string name="bottom_nav_menu_fav">Favoris</string>
     <string name="bottom_nav_menu_message">Messages</string>
     <string name="bottom_nav_menu_profil">Profil</string>
-    <string name="adresse_livraison">adresse_livraison</string>
 
 
 </resources>
