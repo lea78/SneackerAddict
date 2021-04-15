@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
+            android:onClick="back"
             android:background="@color/white"
             android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
@@ -30,16 +31,17 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/layout_changement_adresse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/barduhaut"
+        android:layout_marginTop="100dp"
         android:layout_centerInParent="true">
 
         <RadioGroup
             android:id="@+id/radiogroup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/adresse_actuelle"
@@ -48,6 +50,7 @@
                 android:fontFamily="@font/mulish_regular"
                 android:textColor="@color/grey"
                 android:layout_gravity="center"
+                android:checked="true"
                 android:text="Adresse actuelle" />
 
             <TextView
@@ -66,19 +69,28 @@
                 android:fontFamily="@font/mulish_regular"
                 android:textColor="@color/grey"
                 android:layout_marginTop="30dp"
+                android:checked="false"
                 android:text="Nouvelle adresse" />
 
             <EditText
+                android:id="@+id/edit_adress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="15sp"
                 android:inputType="text"
                 android:hint="@string/adresse_livraison" />
-
         </RadioGroup>
 
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button_changer_adresse"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/layout_changement_adresse"
+        android:text="Choisir une adresse"/>
 
 </RelativeLayout>

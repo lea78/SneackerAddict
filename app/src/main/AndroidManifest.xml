@@ -43,6 +43,12 @@
             </intent-filter>
         </activity>-->
 
+        <activity android:name=".activities.AdressActivity"
+            android:parentActivityName=".activities.ConfirmActivity"
+            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+
+        </activity>
+
     </application>
 
 </manifest>
