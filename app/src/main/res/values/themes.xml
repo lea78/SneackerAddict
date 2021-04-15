@@ -35,9 +35,10 @@
 
     <style name="button_orange" parent="Theme.Sneaker_addict">
         <item name="backgroundTint">@color/orange</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
     </style>
 
-    <style name="styleSheetTry" parent="Theme.Sneaker_addict">
+    <style name="button_orange_huge" parent="Theme.Sneaker_addict">
         <item name="backgroundTint">@color/orange_app</item>
         <item name="android:paddingLeft">40dp</item>
         <item name="android:paddingRight">40dp</item>

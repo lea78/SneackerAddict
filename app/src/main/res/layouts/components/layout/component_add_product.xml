@@ -123,6 +123,16 @@
             android:layout_marginTop="@dimen/margin_blank_medium"
             android:text="@string/add_taille_prod"/>
 
+        <Button
+            style="@style/button_orange_huge"
+            android:id="@+id/btn_submit_addproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_add_taille"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="Valider"/>
+
     </RelativeLayout>
 
 </androidx.core.widget.NestedScrollView>
