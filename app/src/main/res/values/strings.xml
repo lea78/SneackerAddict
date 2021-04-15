@@ -69,6 +69,10 @@
     <!--Parameters section-->
     <string name="titre_page_param">Paramètres</string>
     <string name="titre_page_addprod">Ajouter une création</string>
+    <string name="add_img">Choisissez un visuel</string>
+    <string name="add_titre_prod">Ajouter un titre</string>
+    <string name="add_descri_prod">Détails sur votre création</string>
+    <string name="add_taille_prod">Les tailles disponibles</string>
     <string name="modifier">Modifier</string>
     
     <!--BOTTOM NAVIGATON VIEW-->

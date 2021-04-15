@@ -4,4 +4,5 @@
     <dimen name="width_header_name_page">10dp</dimen>
     <dimen name="margin_general">10dp</dimen>
     <dimen name="margin_blank">100dp</dimen>
+    <dimen name="margin_blank_medium">30dp</dimen>
 </resources>
