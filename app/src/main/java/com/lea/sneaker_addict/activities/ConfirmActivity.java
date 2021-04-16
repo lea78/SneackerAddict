@@ -43,7 +43,7 @@ public class ConfirmActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 
