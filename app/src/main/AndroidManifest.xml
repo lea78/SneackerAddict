@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
 
-        <activity android:name=".activities.ConfirmActivity"
+        <activity android:name=".activities.HomePageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
