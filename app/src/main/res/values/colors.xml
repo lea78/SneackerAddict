@@ -14,6 +14,15 @@
     <color name= "blackDeep">#292F34</color>
     <color name="grey">#394755</color>
     <color name="orange_app">#FD8E10</color>
-    <color name="transparent">#00000000</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <array name="colorPagesViewPager">
+        <item>#EDD9CF</item>
+        <item>#BED4D6</item>
+        <item>#ADCEB7</item>
+        <item>#F7CF8B</item>
+        <item>#FD96A2</item>
+    </array>
 
 </resources>
