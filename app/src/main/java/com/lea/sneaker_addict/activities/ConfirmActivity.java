@@ -23,7 +23,6 @@ public class ConfirmActivity extends AppCompatActivity {
         setContentView(R.layout.activity_confirm);
         newAdress = (TextView)findViewById(R.id.adresse_livraison_1);
         String address = getIntent().getStringExtra("address_change");
-        //newAdress.setText("2 Petre Melikishvili St. 0162, Tsibili");
         newAdress.setText(address);
 
         //*****BOTTOM NAVIGATION BAR*****//
@@ -54,6 +53,11 @@ public class ConfirmActivity extends AppCompatActivity {
 
     public void onClickAdress(View view) {
         Intent intent = new Intent(getApplicationContext(), AdressActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickPayment(View view){
+        Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
         startActivity(intent);
     }
 }
