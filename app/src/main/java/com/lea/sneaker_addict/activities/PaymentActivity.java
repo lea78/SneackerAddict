@@ -3,6 +3,7 @@ package com.lea.sneaker_addict.activities;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,9 +20,8 @@ public class PaymentActivity extends AppCompatActivity {
 
     public EditText mEditPayment;
     public RadioButton rButtonPaypal, rButtonCreditCard;
-    public RadioGroup rPaymentGroup;
     public Button buttonPayment;
-    public String strPayment ="";
+    public String confirmPayment ="";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,12 +36,18 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(rButtonPaypal.isChecked()){
                     Intent intent = new Intent(PaymentActivity.this, ConfirmActivity.class);
-                    intent.putExtra("payment_change", R.drawable.paypal);
+                    intent.putExtra("payment_change", "Paypal");
                     startActivity(intent);
                 }
                 if (rButtonCreditCard.isChecked()){
                     Intent intent = new Intent(PaymentActivity.this, ConfirmActivity.class);
-
+                    mEditPayment = (EditText)findViewById(R.id.edit_num_carte);
+                    String strPayment = mEditPayment.getText().toString();
+                    String maskPayment = maskCardNumber(strPayment, "xxxx-xxxx-xxxx-####");
+                    String kindOfPayment = "Carte de crédit";
+                    confirmPayment = kindOfPayment + "\n" +maskPayment;
+                    intent.putExtra("payment_change", confirmPayment);
+                    startActivity(intent);
                 }
             }
         });
@@ -50,4 +56,26 @@ public class PaymentActivity extends AppCompatActivity {
     public void back(View view) {
         startActivity(new Intent(PaymentActivity.this, ConfirmActivity.class));
     }
+
+    //Function to mask the number of the credit card
+    public String maskCardNumber(String cardNumber, String mask){
+        int index = 0;
+        StringBuilder maskedNumber = new StringBuilder();
+        for (int i = 0; i < mask.length(); i++){
+            char c = mask.charAt(i);
+            if(c == '#'){
+                maskedNumber.append(cardNumber.charAt(index));
+                index++;
+            } else if(c == 'x') {
+                maskedNumber.append(c);
+                index++;
+            }else{
+                maskedNumber.append(c);
+            }
+        }
+
+        return maskedNumber.toString();
+    }
 }
+
+

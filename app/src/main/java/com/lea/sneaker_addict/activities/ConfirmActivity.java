@@ -16,14 +16,22 @@ import com.lea.sneaker_addict.R;
 public class ConfirmActivity extends AppCompatActivity {
 
     TextView newAdress;
+    TextView newPayment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
+
+        //Set the choosen option inside card view
         newAdress = (TextView)findViewById(R.id.adresse_livraison_1);
         String address = getIntent().getStringExtra("address_change");
         newAdress.setText(address);
+
+        newPayment = (TextView)findViewById(R.id.text_moyen_paiement);
+        String paiment = getIntent().getStringExtra("payment_change");
+        newPayment.setText(paiment);
+
 
         //*****BOTTOM NAVIGATION BAR*****//
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
