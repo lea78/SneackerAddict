@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
 
-        <activity android:name=".activities.ConfirmActivity"
+        <activity android:name=".activities.AdressActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,11 +43,11 @@
             </intent-filter>
         </activity>-->
 
-        <activity android:name=".activities.AdressActivity"
+        <!--<activity android:name=".activities.AdressActivity"
             android:parentActivityName=".activities.ConfirmActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
 
-        </activity>
+        </activity>-->
 
     </application>
 

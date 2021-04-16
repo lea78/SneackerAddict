@@ -123,6 +123,7 @@
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_regular"
+                        android:hint="@string/adresse_livraison"
                         android:text="@string/adresse_livraison"
                         android:textColor="@color/grey" />
 
@@ -167,6 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:cardElevation="3dp"
+            android:onClick="onClickPayment"
             app:cardUseCompatPadding="true">
 
             <LinearLayout

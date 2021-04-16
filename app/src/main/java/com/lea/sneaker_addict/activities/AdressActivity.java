@@ -2,15 +2,18 @@ package com.lea.sneaker_addict.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lea.sneaker_addict.R;
 
 public class AdressActivity extends AppCompatActivity {
@@ -24,7 +27,7 @@ public class AdressActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.component_adressforshipping);
+        setContentView(R.layout.activity_adressforshipping);
 
         rAdressGroup = (RadioGroup)findViewById(R.id.radiogroup);
         button = (Button)findViewById(R.id.button_changer_adresse);
@@ -47,6 +50,31 @@ public class AdressActivity extends AppCompatActivity {
                     intent.putExtra("address_change", str);
                     startActivity(intent);
                 }
+            }
+        });
+
+        //*****BOTTOM NAVIGATION BAR*****//
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(R.id.menu_produit);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.menu_homepage :
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.menu_produit:
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        return true;
+                }
+                return false;
             }
         });
     }
