@@ -94,4 +94,8 @@ public class ProductPageActivity extends AppCompatActivity implements AdapterVie
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    public void back(View view){
+        startActivity(new Intent(ProductPageActivity.this, AllProductsActivity.class));
+    }
 }
