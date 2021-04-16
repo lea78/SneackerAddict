@@ -16,7 +16,7 @@ public class Model extends SQLiteOpenHelper {
 
     String tag = "ModelTest";
     public static final String DATABASE_NAME = "SneakersAddict.db";
-    //public static final String TABLE_NAME;
+    //public static final String TABLE_NAME = ;
 
     public Model(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
