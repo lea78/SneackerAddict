@@ -37,8 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:numStars="5"
-                    android:layout_margin_="@dimen/margin_general"/>
+                    android:numStars="5" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
