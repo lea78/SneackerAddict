@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/register_username"
             android:hint="Mail"
+            android:inputType="textEmailAddress"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_regular"/>
 
@@ -46,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/register_mail"
+            android:inputType="textPassword"
             android:hint="Password"
             android:fontFamily="@font/poppins_regular"/>
 
