@@ -101,7 +101,7 @@
             <ImageView
                 android:layout_width="@dimen/margin_blank_medium"
                 android:layout_height="@dimen/margin_blank_medium"
-                android:src="@drawable/logo_sneakers_menu"
+                android:src="@drawable/logo_sneakers_menu"/>
 
             <TextView
                 android:id="@+id/txt_add_titreprod"
@@ -134,7 +134,7 @@
             <ImageView
                 android:layout_width="@dimen/margin_blank_medium"
                 android:layout_height="@dimen/margin_blank_medium"
-                android:src="@drawable/edit"
+                android:src="@drawable/edit"/>
 
             <TextView
                 android:id="@+id/txt_add_descriprod"

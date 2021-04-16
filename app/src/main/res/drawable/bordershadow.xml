@@ -4,16 +4,16 @@
         <layer-list>
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="@color/blackDeep"/>
+                    <solid android:color="@color/blackDeep" />
                     <corners android:radius="0dp" />
                 </shape>
             </item>
-                <item android:left="0dp" android:right="0dp" android:top="0dp" android:bottom="8dp">
-                    <shape android:shape="rectangle">
-                        <solid android:color="#FFFFFF"/>
-                        <corners android:radius="0dp" />
-                    </shape>
-                </item>
+            <item android:left="0dp" android:right="0dp" android:top="0dp" android:bottom="8dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FFFFFF" />
+                    <corners android:radius="0dp" />
+                </shape>
+            </item>
         </layer-list>
     </item>
 </selector>
