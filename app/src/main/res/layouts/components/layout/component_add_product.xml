@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/contenu_add_prod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Header name page -->
+        <LinearLayout
+            android:id="@+id/layout_header_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_header_name_page"
+            android:orientation="horizontal"
+            android:padding="@dimen/width_header_name_page">
+
+            <ImageView
+                android:id="@+id/img_retour_para"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fleche_retour_orange" />
+
+            <TextView
+                style="@style/titre_accueil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/titre_page_addprod" />
+        </LinearLayout>
+
+        <!-- add image -->
+        <TextView
+            style="@style/prix_accueil"
+            android:id="@+id/titre_add_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_header_param"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="@string/add_img"/>
+
+        <LinearLayout
+            android:id="@+id/layout_buttons_addimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titre_add_img"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/btnChoose"
+                style="@style/button_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_general"
+                android:text="Choose" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                style="@style/button_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_buttons_addimage"/>
+
+        <!-- add titre -->
+
+        <TextView
+            style="@style/prix_accueil"
+            android:id="@+id/txt_add_titreprod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="@string/add_titre_prod"/>
+
+        <EditText
+            android:id="@+id/edit_titreprod"
+            android:layout_width="@dimen/width_btn_profil"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_below="@+id/txt_add_titreprod"/>
+
+        <!-- add description -->
+
+        <TextView
+            style="@style/prix_accueil"
+            android:id="@+id/txt_add_descriprod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_titreprod"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="@string/add_descri_prod"/>
+
+        <EditText
+            android:id="@+id/edit_descriprod"
+            android:layout_width="@dimen/width_btn_profil"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_below="@+id/txt_add_descriprod"/>
+
+        <!-- add taille -->
+
+        <TextView
+            style="@style/prix_accueil"
+            android:id="@+id/txt_add_taille"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_descriprod"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="@string/add_taille_prod"/>
+
+        <Button
+            style="@style/button_orange_huge"
+            android:id="@+id/btn_submit_addproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_add_taille"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_blank_medium"
+            android:text="Valider"/>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

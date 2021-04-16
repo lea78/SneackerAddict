@@ -60,6 +60,25 @@
         de cette dernière.
     </string>
 
+
+    <!--PROFILE PAGE-->
+    <string name="btn_parameters">Paramètres</string>
+    <string name="btn_histo">Mes achats et ventes</string>
+    <string name="btn_add_product"> Ajouter une création</string>
+    <string name="btn_bundle">Envie de plus de visibilité</string>
+    <string name="btn_a_propos">A Propos</string>
+    <string name="btn_aide">Aide</string>
+
+    <!--Parameters section-->
+    <string name="titre_page_param">Paramètres</string>
+    <string name="titre_page_addprod">Ajouter une création</string>
+    <string name="add_img">Choisissez un visuel</string>
+    <string name="add_titre_prod">Ajouter un titre</string>
+    <string name="add_descri_prod">Détails sur votre création</string>
+    <string name="add_taille_prod">Les tailles disponibles</string>
+    <string name="modifier">Modifier</string>
+    
+
     <string name="adresse_livraison">
         2 Petre Melikishvili St.
         0162, Tsibili
