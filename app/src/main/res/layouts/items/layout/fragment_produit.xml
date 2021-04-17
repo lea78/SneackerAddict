@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_page_news_rootview"
+    android:id="@+id/layout_header_param"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".helpers.AProposFragment">
+    tools:context=".helpers.ProduitFragment">
+
 
     <TextView
-        android:id="@+id/fragment_page_news_title"
+        android:id="@+id/fragment_page_title"
         style="@style/titre_accueil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="Fragment à propos" />
-
+        android:text="fragment produit" />
 
 </FrameLayout>
