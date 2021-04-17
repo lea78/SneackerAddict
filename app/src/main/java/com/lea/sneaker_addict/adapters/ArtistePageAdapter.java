@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.lea.sneaker_addict.helpers.AProposFragment;
+import com.lea.sneaker_addict.helpers.AvisFragment;
 import com.lea.sneaker_addict.helpers.ProduitFragment;
 
 import java.util.ArrayList;
@@ -27,6 +28,8 @@ public class ArtistePageAdapter extends FragmentStateAdapter {
                 return new AProposFragment();
             case 1:
                 return new ProduitFragment();
+            case 2:
+                return new AvisFragment();
             default:
                 return null;
         }
@@ -34,7 +37,7 @@ public class ArtistePageAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 
 

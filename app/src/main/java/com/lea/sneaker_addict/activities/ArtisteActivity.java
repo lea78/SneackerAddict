@@ -41,6 +41,8 @@ public class ArtisteActivity extends AppCompatActivity {
                         tab.setText("Produits");
                         break;
                     }
+                    case 2:
+                        tab.setText("Avis");
                 }
             }
         }
