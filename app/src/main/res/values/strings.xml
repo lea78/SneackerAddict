@@ -110,6 +110,18 @@
         <item>90€</item>
         <item>200€</item>
     </string-array>
-
+    
+    <!--COMMENTS ON THE ARTISTE'S PROFILE-->
+    <string-array name="comments_clientname_artisteprofil">
+        <item>Jeff Lamda</item>
+        <item>Martine Quelkonc</item>
+        <item>Roger Commun</item>
+    </string-array>
+    
+    <string-array name="comments_comments_artisteprofil">
+        <item>Au top, super rapide, un travail précis pour un résultat canon ! Je tweete direct...</item>
+        <item>Super ! Mes chaussures sont trop belles !</item>
+        <item>J'aurais aimé que les couleurs brillent plus mais bon, bon travail sinon. Envoie rapide.</item>
+    </string-array>
 
 </resources>
