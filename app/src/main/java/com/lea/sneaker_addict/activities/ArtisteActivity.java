@@ -52,11 +52,7 @@ public class ArtisteActivity extends AppCompatActivity {
         );
         tabLayoutMediator.attach();
 
-        ProduitFragment produitFragment = new ProduitFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.framelayout_produit_pageartiste, produitFragment);
-        fragmentTransaction.commit();
+
 
 
     }

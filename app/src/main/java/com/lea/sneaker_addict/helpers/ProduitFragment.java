@@ -22,6 +22,7 @@ public class ProduitFragment extends Fragment {
     int imageProduit[]={R.drawable.sneakers_ghibli1, R.drawable.sneakers_ghibli_2, R.drawable.sneakers_ghibli_3};
     private ProduitArtistePageAdapter.RecyclerViewClickListenerProduitArtiste listener;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,11 +30,12 @@ public class ProduitFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_pageArtiste_produits);
         nomProduit = getResources().getStringArray(R.array.product_name_artisteprofil);
         prixProduit = getResources().getStringArray(R.array.product_price_artisteprofil);
-
         ProduitArtistePageAdapter adapterProduit = new ProduitArtistePageAdapter(getContext(), nomProduit, prixProduit, imageProduit, listener);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapterProduit);
+
         return view;
     }
+
 }
