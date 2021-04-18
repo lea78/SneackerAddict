@@ -98,5 +98,18 @@
         J\'ai un style très graphique, spécialisé dans le line art et les design de personnages.
     </string>
 
+    <!--PRODUCTS OF THE ARTISTES-->
+    <string-array name="product_name_artisteprofil">
+        <item>Nausicaa, Ghibli</item>
+        <item>Princesse Mononoke, Ghibli</item>
+        <item>Totoro, Ghibli</item>
+    </string-array>
+
+    <string-array name="product_price_artisteprofil">
+        <item>120€</item>
+        <item>90€</item>
+        <item>200€</item>
+    </string-array>
+
 
 </resources>
