@@ -3,19 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".helpers.AProposFragment">
 
     <LinearLayout
         android:id="@+id/layout_cardview_artiste"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_artiste"
-            android:layout_width="370dp"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="320dp"
@@ -46,6 +51,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="20sp"
                         android:text="Sneaky Girl" />
 
                     <LinearLayout
@@ -73,6 +80,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -91,6 +99,7 @@
                         android:layout_width="70dp"
                         android:layout_height="40dp"
                         android:padding="0dp"
+                        android:layout_marginTop="10dp"
                         android:text="Contact"
                         android:textSize="10sp"
                         tools:ignore="SmallSp" />
@@ -102,22 +111,33 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
                     android:text="Me MySelf and I" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/textView_aPropos" />
 
             </LinearLayout>
