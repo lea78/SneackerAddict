@@ -119,9 +119,15 @@
     </string-array>
     
     <string-array name="comments_comments_artisteprofil">
-        <item>Au top, super rapide, un travail précis pour un résultat canon ! Je tweete direct...</item>
+        <item>Au top, super rapide, un travail précis pour un résultat canon ! Je tweete direct…</item>
         <item>Super ! Mes chaussures sont trop belles !</item>
-        <item>J'aurais aimé que les couleurs brillent plus mais bon, bon travail sinon. Envoie rapide.</item>
+        <item>J\'aurais aimé que les couleurs brillent plus mais bon, bon travail sinon. Envoie rapide.</item>
+    </string-array>
+
+    <string-array name="comments_avis_artisteprofil">
+        <item>18/03/2021</item>
+        <item>07/04/2021</item>
+        <item>10/04/2021</item>
     </string-array>
 
 </resources>

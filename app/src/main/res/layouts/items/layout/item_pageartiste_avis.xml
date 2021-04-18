@@ -7,7 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,8 +24,9 @@
 
                 <ImageView
                     android:id="@+id/pageArtiste_imgPhotoClient"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@mipmap/ic_launcher" />
 
                 <LinearLayout
