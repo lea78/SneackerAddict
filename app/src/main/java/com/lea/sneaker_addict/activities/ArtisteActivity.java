@@ -1,6 +1,8 @@
 package com.lea.sneaker_addict.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TableLayout;
 
@@ -12,6 +14,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -25,7 +28,7 @@ public class ArtisteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.component_artistepage);
+        setContentView(R.layout.activity_artistepage);
 
         ViewPager2 viewPager2 = findViewById(R.id.component_artiste_viewpager);
         viewPager2.setAdapter(new ArtistePageAdapter(this));
@@ -52,6 +55,30 @@ public class ArtisteActivity extends AppCompatActivity {
         );
         tabLayoutMediator.attach();
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(R.id.menu_homepage);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+
+                    case R.id.menu_homepage:
+                        return true;
+
+                    case R.id.menu_produit:
+                        startActivity(new Intent(getApplicationContext(), AllProductsActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        return true;
+                }
+                return false;
+            }
+        });
 
 
 
