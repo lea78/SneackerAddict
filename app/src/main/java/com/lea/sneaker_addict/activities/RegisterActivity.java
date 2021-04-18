@@ -52,13 +52,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void registerUser() {
-        String pseudo = editTextPseudo.getText().toString().trim();
-        String email = editTextMail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
+        final String pseudo = editTextPseudo.getText().toString().trim();
+        final String email = editTextMail.getText().toString().trim();
+        final String password = editTextPassword.getText().toString().trim();
 
         progressDialog.setMessage("En cours d'enregistrement...");
         progressDialog.show();
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_REGISTER, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -81,13 +80,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_LONG).show();
             }
         }){
-            @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
-                params.put("pseudo", pseudo);
-                params.put("email", email);
-                params.put("password", password);
+                params.put("pseudoUser", pseudo);
+                params.put("mailUser", email);
+                params.put("passwordUser", password);
+                Log.i("MAP", String.valueOf(params));
                 return params;
             }
         };
