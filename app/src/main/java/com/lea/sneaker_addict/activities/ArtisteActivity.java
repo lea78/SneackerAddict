@@ -6,6 +6,8 @@ import android.widget.TableLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -16,6 +18,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import com.lea.sneaker_addict.R;
 import com.lea.sneaker_addict.adapters.ArtistePageAdapter;
 import com.lea.sneaker_addict.helpers.AProposFragment;
+import com.lea.sneaker_addict.helpers.ProduitFragment;
 
 public class ArtisteActivity extends AppCompatActivity {
 
@@ -48,6 +51,14 @@ public class ArtisteActivity extends AppCompatActivity {
         }
         );
         tabLayoutMediator.attach();
+
+        ProduitFragment produitFragment = new ProduitFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.framelayout_produit_pageartiste, produitFragment);
+        fragmentTransaction.commit();
+
+
     }
 
 }

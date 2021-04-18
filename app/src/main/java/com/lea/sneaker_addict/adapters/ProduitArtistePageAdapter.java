@@ -66,7 +66,7 @@ public class ProduitArtistePageAdapter extends RecyclerView.Adapter<ProduitArtis
 
     @Override
     public int getItemCount() {
-        return nomProduit.length;
+        return imgProduit.length;
     }
 
     public interface RecyclerViewClickListenerProduitArtiste{
