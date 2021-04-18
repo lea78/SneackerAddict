@@ -2,6 +2,7 @@ package com.lea.sneaker_addict.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ import com.lea.sneaker_addict.bdd.Constants;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,9 +58,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         progressDialog.setMessage("En cours d'enregistrement...");
         progressDialog.show();
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_REGISTER, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Log.i("VOLLEY", response);
                 progressDialog.dismiss();
 
                 try {
@@ -66,15 +71,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 } catch (JSONException e){
                     e.printStackTrace();
                 }
-
-
             }
         },
         new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
             progressDialog.hide();
-                Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_LONG).show();
+            Log.e("VOLLEY", error.toString());
+            Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_LONG).show();
             }
         }){
             @Nullable
@@ -90,7 +94,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-
     @Override
     public void onClick(View view) {
         if (view == buttonRegister)
