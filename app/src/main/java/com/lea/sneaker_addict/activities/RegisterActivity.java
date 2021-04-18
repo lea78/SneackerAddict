@@ -20,6 +20,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.lea.sneaker_addict.R;
 import com.lea.sneaker_addict.bdd.Constants;
+import com.lea.sneaker_addict.bdd.RequestHandler;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -90,8 +91,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 return params;
             }
         };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+
     }
     @Override
     public void onClick(View view) {
