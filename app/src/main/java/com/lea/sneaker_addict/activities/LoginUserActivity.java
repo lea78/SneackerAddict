@@ -100,15 +100,18 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                     @Override
                     public void onResponse(String response) {
                         progressDialog.dismiss();
+                        Log.i("Test1", response.toString());
+
                         try {
+
+                            JSONObject jsonLoginObj = new JSONObject(response);
 
                             Log.i("Test", response.toString());
 
-                            JSONObject jsonLoginObj = new JSONObject(response);
-                            Toast.makeText(getApplicationContext(), jsonLoginObj.getString("message"), Toast.LENGTH_LONG).show();
-
-                            Log.i("Test", jsonLoginObj.toString());
                             if(!jsonLoginObj.getBoolean("error")){
+
+                                Log.i("Test", jsonLoginObj.toString());
+
                                 SharedPrefManager.getInstance(getApplicationContext())
                                     .userLogin(
                                         jsonLoginObj.getInt("idUser"),
@@ -116,7 +119,7 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                                         jsonLoginObj.getString("mailUser")
                                 );
                                 startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
-
+                                //Toast.makeText(getApplicationContext(), "user succesfully registered", Toast.LENGTH_LONG).show();
 
                             }else{
                                 Toast.makeText(getApplicationContext(), jsonLoginObj.getString("message"), Toast.LENGTH_LONG).show();
