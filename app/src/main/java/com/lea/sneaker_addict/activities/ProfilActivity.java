@@ -13,11 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.lea.sneaker_addict.R;
 import com.lea.sneaker_addict.bdd.SharedPrefManager;
 
-import org.w3c.dom.Text;
-
-import java.util.logging.SocketHandler;
-
-public class ProfilActivity extends AppCompatActivity implements View.OnClickListener{
+public class ProfilActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView pseudoTextView;
     private Button buttonDeco, buttonParams, buttonAddCrea;
@@ -28,28 +24,60 @@ public class ProfilActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilpage);
 
-        if(!SharedPrefManager.getInstance(this).isLoggedIn()){
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, LoginUserActivity.class));
         }
         pseudoTextView = (TextView) findViewById(R.id.profil_username);
-        Log.i("pseudo", "je récup mon id text view");
 
         pseudoTextView.setText(SharedPrefManager.getInstance(this).getPseudo());
-        buttonDeco = (Button) findViewById(R.id.btn_deco);
+
+       /* buttonDeco = (Button) findViewById(R.id.btn_deco);
         buttonParams = (Button) findViewById(R.id.btn_param);
         buttonAddCrea = (Button) findViewById(R.id.btn_add_crea);
 
         buttonParams.setOnClickListener(this);
         buttonAddCrea.setOnClickListener(this);
+        buttonDeco.setOnClickListener(this);*/
+
     }
 
 
     @Override
     public void onClick(View view) {
-        if(view == buttonParams)
-            startActivity(new Intent(this, ParametersActivity.class));
-        if(view == buttonAddCrea)
-            startActivity(new Intent(this, AddProductActivity.class));
+        switch (view.getId()) {
+
+            case R.id.btn_param:
+                Log.i("test", "parameters");
+                startActivity(new Intent(this, ParametersActivity.class));
+
+            case R.id.btn_add_crea:
+                Log.i("test", "addcrea");
+                startActivity(new Intent(this, AddProductActivity.class));
+
+            case R.id.btn_deco:
+                SharedPrefManager.getInstance(this).logout();
+                finish();
+                startActivity(new Intent(this, LoginUserActivity.class));
+
+
+        }
     }
+
 }
+        /*if (view == buttonParams) {
+            Log.i("test", "parameters");
+            startActivity(new Intent(this, ParametersActivity.class));
+        }
+        if (view == buttonAddCrea) {
+            Log.i("test", "addcrea");
+            startActivity(new Intent(this, AddProductActivity.class));
+        }
+        if (view == buttonDeco) {
+            SharedPrefManager.getInstance(this).logout();
+            finish();
+            startActivity(new Intent(this, LoginUserActivity.class));
+        }
+    }*/
+
+
