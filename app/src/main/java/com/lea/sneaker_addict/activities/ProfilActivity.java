@@ -27,45 +27,27 @@ public class ProfilActivity extends AppCompatActivity implements View.OnClickLis
         if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, LoginUserActivity.class));
+
         }
         pseudoTextView = (TextView) findViewById(R.id.profil_username);
 
         pseudoTextView.setText(SharedPrefManager.getInstance(this).getPseudo());
 
-       /* buttonDeco = (Button) findViewById(R.id.btn_deco);
+        buttonDeco = (Button) findViewById(R.id.btn_deco);
         buttonParams = (Button) findViewById(R.id.btn_param);
         buttonAddCrea = (Button) findViewById(R.id.btn_add_crea);
 
         buttonParams.setOnClickListener(this);
         buttonAddCrea.setOnClickListener(this);
-        buttonDeco.setOnClickListener(this);*/
+        buttonDeco.setOnClickListener(this);
+
 
     }
 
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.btn_param:
-                Log.i("test", "parameters");
-                startActivity(new Intent(this, ParametersActivity.class));
-
-            case R.id.btn_add_crea:
-                Log.i("test", "addcrea");
-                startActivity(new Intent(this, AddProductActivity.class));
-
-            case R.id.btn_deco:
-                SharedPrefManager.getInstance(this).logout();
-                finish();
-                startActivity(new Intent(this, LoginUserActivity.class));
-
-
-        }
-    }
-
-}
-        /*if (view == buttonParams) {
+        if (view == buttonParams) {
             Log.i("test", "parameters");
             startActivity(new Intent(this, ParametersActivity.class));
         }
@@ -75,9 +57,12 @@ public class ProfilActivity extends AppCompatActivity implements View.OnClickLis
         }
         if (view == buttonDeco) {
             SharedPrefManager.getInstance(this).logout();
-            finish();
-            startActivity(new Intent(this, LoginUserActivity.class));
+
+
         }
-    }*/
+    }
+
+}
+
 
 

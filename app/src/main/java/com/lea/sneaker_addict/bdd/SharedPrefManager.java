@@ -1,7 +1,10 @@
 package com.lea.sneaker_addict.bdd;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+
+import com.lea.sneaker_addict.activities.LoginUserActivity;
 
 
 public class SharedPrefManager {
@@ -45,12 +48,12 @@ public class SharedPrefManager {
         return false;
     }
 
-    public boolean logout(){
+    public void logout(){
         SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        return true;
+        ctx.startActivity(new Intent(ctx, LoginUserActivity.class));
     }
 
     public String getPseudo(){
