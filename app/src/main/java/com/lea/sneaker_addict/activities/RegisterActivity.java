@@ -53,9 +53,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextPseudo = (EditText) findViewById(R.id.register_username);
         editTextMail = (EditText) findViewById(R.id.register_mail);
         editTextPassword = (EditText) findViewById(R.id.register_password);
-
         textViewLogin = (TextView) findViewById(R.id.text_retour_login);
-
         buttonRegister = (Button) findViewById(R.id.button_Inscription);
 
         progressDialog = new ProgressDialog(this);

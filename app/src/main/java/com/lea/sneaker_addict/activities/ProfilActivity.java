@@ -39,12 +39,17 @@ public class ProfilActivity extends AppCompatActivity implements View.OnClickLis
         buttonDeco = (Button) findViewById(R.id.btn_deco);
         buttonParams = (Button) findViewById(R.id.btn_param);
         buttonAddCrea = (Button) findViewById(R.id.btn_add_crea);
+
+        buttonParams.setOnClickListener(this);
+        buttonAddCrea.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view) {
         if(view == buttonParams)
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, ParametersActivity.class));
+        if(view == buttonAddCrea)
+            startActivity(new Intent(this, AddProductActivity.class));
     }
 }
