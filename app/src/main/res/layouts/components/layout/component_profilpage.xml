@@ -23,6 +23,7 @@
                 android:src="@drawable/avatar_artiste" />
 
             <TextView
+                android:id="@+id/profil_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -31,6 +32,7 @@
 
             <Button
                 style="@style/btn_profil_transparent"
+                android:id="@+id/btn_add_crea"
                 android:layout_width="@dimen/width_btn_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -38,11 +40,21 @@
 
             <Button
                 style="@style/btn_profil_transparent"
+                android:id="@+id/btn_param"
                 android:layout_width="@dimen/width_btn_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/btn_parameters" />
 
+            <Button
+                style="@style/btn_profil_transparent"
+                android:id="@+id/btn_deco"
+                android:layout_width="@dimen/width_btn_profil"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btn_deco" />
+
+            <!--
             <Button
                 style="@style/btn_profil_transparent"
                 android:layout_width="@dimen/width_btn_profil"
@@ -71,6 +83,7 @@
                 android:layout_gravity="center"
                 android:text="@string/btn_aide" />
 
+        -->
         </LinearLayout>
     </RelativeLayout>
 

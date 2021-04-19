@@ -52,4 +52,9 @@ public class SharedPrefManager {
         editor.apply();
         return true;
     }
+
+    public String getPseudo(){
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_PSEUDO, null);
+    }
 }

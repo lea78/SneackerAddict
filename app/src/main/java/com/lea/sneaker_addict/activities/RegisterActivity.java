@@ -23,6 +23,7 @@ import com.android.volley.toolbox.Volley;
 import com.lea.sneaker_addict.R;
 import com.lea.sneaker_addict.bdd.Constants;
 import com.lea.sneaker_addict.bdd.RequestHandler;
+import com.lea.sneaker_addict.bdd.SharedPrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,6 +43,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, ProfilActivity.class));
+            return;
+        }
 
         editTextPseudo = (EditText) findViewById(R.id.register_username);
         editTextMail = (EditText) findViewById(R.id.register_mail);
@@ -99,13 +106,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
 
     }
+
     @Override
     public void onClick(View view) {
         if (view == buttonRegister)
             registerUser();
         if(view == textViewLogin)
-            Log.i("Activity","onclick");
             startActivity(new Intent(this, LoginUserActivity.class));
-        Log.i("Activity","onclickafter");
     }
 }
