@@ -1,77 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/accueil_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentTop="false"
+    android:scaleType="centerInside">
 
     <include
-        android:id="@+id/includ_accueil"
+        android:id="@+id/include_componentLogin"
+        layout="@layout/component_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img_logo_login"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
-
-
-        <EditText
-            android:id="@+id/login_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Login"
-            android:fontFamily="@font/poppins_regular"
-            android:layout_marginBottom="20dp"/>
-
-        <EditText
-            android:id="@+id/password_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/login_edit"
-            android:inputType="textPassword"
-            android:hint="Password"
-            android:fontFamily="@font/poppins_regular"/>
-
-        <TextView
-            android:id="@+id/text_mdp_oublie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/password_edit"
-            android:text="Mot de passe oublié?"
-            android:textAlignment="textEnd"
-            android:fontFamily="@font/poppins_light"
-            android:layout_marginTop="5dp"/>
-
-
-        <Button
-            android:id="@+id/button_connexion"
-            style="@style/button_orange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_mdp_oublie"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Connexion" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        layout="@layout/component_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_alignParentTop="true"
         android:layout_above="@+id/bottom_nav"
-        />
+        android:layout_alignParentTop="true" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="labeled"/>
-
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp" />
 
 </RelativeLayout>
