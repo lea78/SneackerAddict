@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
 
-        <activity android:name=".activities.HomePageActivity"
+        <activity
+            android:name=".activities.HomePageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.ArtisteActivity"
+        <activity
+            android:name=".activities.ArtisteActivity"
             android:parentActivityName=".activities.HomePageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
@@ -27,16 +29,27 @@
             </intent-filter>
         </activity>
 
-        <!--<activity android:name=".activities.AllProductsActivity"
-            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-
-        </activity>
-
-        <activity android:name=".activities.ProductPageActivity"
+        <activity
+            android:name=".activities.ProductPageActivity"
             android:parentActivityName=".activities.AllProductsActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.AllProductsActivity"
+            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--
 
         <activity android:name=".activities.LoginActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
@@ -52,7 +65,8 @@
             </intent-filter>
         </activity>-->
 
-        <activity android:name=".activities.AdressActivity"
+        <activity
+            android:name=".activities.AdressActivity"
             android:parentActivityName=".activities.ConfirmActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
@@ -61,7 +75,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.PaymentActivity"
+        <activity
+            android:name=".activities.PaymentActivity"
             android:parentActivityName=".activities.ConfirmActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
@@ -71,7 +86,6 @@
         </activity>
 
     </application>
-
 
 
 </manifest>

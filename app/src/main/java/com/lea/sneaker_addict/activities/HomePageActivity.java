@@ -19,7 +19,7 @@ import com.lea.sneaker_addict.R;
 import java.util.ArrayList;
 
 
-public class HomePageActivity extends AppCompatActivity implements HomePageArtisteAdapter.OnArtisteListener{
+public class HomePageActivity extends AppCompatActivity implements HomePageArtisteAdapter.OnArtisteListener, HomePageShoesAdapter.OnShoesListener{
 
     RecyclerView artistesRecycler;
     RecyclerView.Adapter adapter;
@@ -84,18 +84,24 @@ public class HomePageActivity extends AppCompatActivity implements HomePageArtis
         basketRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         ArrayList<HomePageShoesHelper> helperSliderBaskets = new ArrayList<>();
-        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket1, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket2, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket3, "Shoes in color", "120€"));
-        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket4, "Shoes in color", "120€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket1, "Noir et Blanc", "70€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket2, "Colorfull", "60€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.accueil_basket3, "Graphic Shoes", "95€"));
+        helperSliderBaskets.add(new HomePageShoesHelper(R.drawable.page_produit_sneakers0, "VANS Carpe Koï", "120€"));
 
-        adapterBasket = new HomePageShoesAdapter(helperSliderBaskets);
+        adapterBasket = new HomePageShoesAdapter(helperSliderBaskets, this);
         basketRecycler.setAdapter(adapterBasket);
     }
 
     @Override
     public void onArtisteClick(int position) {
         Intent intent = new Intent(this, ArtisteActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onShoesClick(int position) {
+        Intent intent = new Intent(this, ProductPageActivity.class);
         startActivity(intent);
     }
 }

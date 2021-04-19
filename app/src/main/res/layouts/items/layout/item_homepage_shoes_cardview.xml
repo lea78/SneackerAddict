@@ -12,13 +12,14 @@
 
         <ImageView
             android:id="@+id/accueil_image_produit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="76dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/accueil_basket1"/>
 
         <LinearLayout
             android:id="@+id/accueil_nouveaute_texte"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
@@ -47,7 +48,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_baseline_navigate_next_24"
             android:layout_gravity="center"
-            android:layout_marginStart="110dp"
+            android:layout_marginStart="50dp"
             android:background="@color/white"/>
 
 
