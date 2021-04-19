@@ -49,15 +49,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:checked="true"
-                android:drawableRight="@drawable/paypal"
+                android:buttonTint="@color/orange_app"
+                android:drawableEnd="@drawable/paypal"
                 android:fontFamily="@font/mulish_regular"
                 android:textColor="@color/grey" />
 
             <RadioButton
-                android:id="@+id/nouvelle_adresse"
+                android:id="@+id/info_carte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:buttonTint="@color/orange_app"
                 android:checked="false"
                 android:drawableRight="@drawable/credit_card_payment"
                 android:fontFamily="@font/mulish_regular"
@@ -86,7 +88,7 @@
                         android:textAlignment="textEnd" />
 
                     <EditText
-                        android:id="@+id/adit_num_carte"
+                        android:id="@+id/edit_num_carte"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="**** **** **** ****"
@@ -147,11 +149,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_myen_paiement"
+        android:id="@+id/button_moyen_paiement"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/background_button"
         android:layout_below="@+id/layout_changement_adresse"
         android:text="Choisir un moyen de paiment"/>

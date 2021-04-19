@@ -22,30 +22,30 @@ public class AdressActivity extends AppCompatActivity {
     public RadioButton rButton;
     public RadioGroup rAdressGroup;
     public Button button;
-    public String str ="";
+    public String str = "";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adressforshipping);
 
-        rAdressGroup = (RadioGroup)findViewById(R.id.radiogroup);
-        button = (Button)findViewById(R.id.button_changer_adresse);
+        rAdressGroup = (RadioGroup) findViewById(R.id.radiogroup);
+        button = (Button) findViewById(R.id.button_changer_adresse);
 
-        button.setOnClickListener(new View.OnClickListener(){
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int selectedId = rAdressGroup.getCheckedRadioButtonId();
-                rButton = (RadioButton)findViewById(selectedId);
-                if(rButton.getText().toString().equals("Adresse actuelle")){
+                rButton = (RadioButton) findViewById(selectedId);
+                if (rButton.getText().toString().equals("Adresse actuelle")) {
                     str = "2 Petre Melikishvili St.0162, Tsibili";
                     Intent intent = new Intent(AdressActivity.this, ConfirmActivity.class);
                     intent.putExtra("address_change", str);
                     startActivity(intent);
                 }
-                if(rButton.getText().toString().equals("Nouvelle adresse")){
+                if (rButton.getText().toString().equals("Nouvelle adresse")) {
                     Intent intent = new Intent(AdressActivity.this, ConfirmActivity.class);
-                    mEdit = (EditText)findViewById(R.id.edit_adress);
+                    mEdit = (EditText) findViewById(R.id.edit_adress);
                     str = mEdit.getText().toString();
                     intent.putExtra("address_change", str);
                     startActivity(intent);
@@ -60,10 +60,10 @@ public class AdressActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
-                    case R.id.menu_homepage :
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    case R.id.menu_homepage:
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 

@@ -1,49 +1,44 @@
 package com.lea.sneaker_addict.adapters;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.lea.sneaker_addict.activities.AllProductsActivity;
-import com.lea.sneaker_addict.helpers.AproposOngletFragment;
-import com.lea.sneaker_addict.helpers.ArtistePageFragment;
+import com.lea.sneaker_addict.helpers.AProposFragment;
+import com.lea.sneaker_addict.helpers.AvisFragment;
+import com.lea.sneaker_addict.helpers.ProduitFragment;
 
-public class ArtistePageAdapter extends FragmentPagerAdapter {
+import java.util.ArrayList;
+
+public class ArtistePageAdapter extends FragmentStateAdapter {
 
 
-    // 1 - Array of colors that will be passed to PageFragment
-    private int[] colors;
+    public ArtistePageAdapter(FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
 
-    // 2 - Default Constructor
-    public ArtistePageAdapter(FragmentManager mgr, int[] colors) {
-        super(mgr);
-        this.colors = colors;
     }
 
+    @NonNull
     @Override
-    public int getCount() {
-        return (5); // 3 - Number of page to show
-    }
-
-    @Override
-    public Fragment getItem(int position) {
-        switch (position){
-            case 0: //Page number 1
-                return ArtistePageFragment.newInstance(position, 1);
-            case 1: //Page number 2
-                return AproposOngletFragment.newInstance();
-            //case 2: //Page number 3
-                //return AllProductsActivity.newInstance();
+    public Fragment createFragment(int position) {
+        switch (position) {
+            case 0:
+                return new AProposFragment();
+            case 1:
+                return new ProduitFragment();
+            case 2:
+                return new AvisFragment();
             default:
                 return null;
         }
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
-        return "Page " + position;
+    public int getItemCount() {
+        return 3;
     }
-
 
 
 }

@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_productpage);
+        setContentView(R.layout.activity_login);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.menu_profil);
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 

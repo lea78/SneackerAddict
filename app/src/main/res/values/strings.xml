@@ -91,6 +91,44 @@
     <string name="bottom_nav_menu_fav">Favoris</string>
     <string name="bottom_nav_menu_message">Messages</string>
     <string name="bottom_nav_menu_profil">Profil</string>
+    <string name="textView_aPropos">
+        Bonjour, je m\'appelle Sneaky Girl et je suis une infographiste.
+        J\'ai plus de 3 ans d\'expérience dans l\'industrie du jeu en tant qu\'artiste 2D.
+        Actuellement, je me développe une passion pour l\'univers Ghibli ! Je suis super fan
+        de Totoro notamment :).
+        J\'ai un style très graphique, spécialisé dans le line art et les design de personnages.
+    </string>
 
+    <!--PRODUCTS OF THE ARTISTES-->
+    <string-array name="product_name_artisteprofil">
+        <item>Nausicaa, Ghibli</item>
+        <item>Princesse Mononoke, Ghibli</item>
+        <item>Totoro, Ghibli</item>
+    </string-array>
+
+    <string-array name="product_price_artisteprofil">
+        <item>120€</item>
+        <item>90€</item>
+        <item>200€</item>
+    </string-array>
+    
+    <!--COMMENTS ON THE ARTISTE'S PROFILE-->
+    <string-array name="comments_clientname_artisteprofil">
+        <item>Jeff Lamda</item>
+        <item>Martine Quelkonc</item>
+        <item>Roger Commun</item>
+    </string-array>
+    
+    <string-array name="comments_comments_artisteprofil">
+        <item>Au top, super rapide, un travail précis pour un résultat canon ! Je tweete direct…</item>
+        <item>Super ! Mes chaussures sont trop belles !</item>
+        <item>J\'aurais aimé que les couleurs brillent plus mais bon, bon travail sinon. Envoie rapide.</item>
+    </string-array>
+
+    <string-array name="comments_avis_artisteprofil">
+        <item>18/03/2021</item>
+        <item>07/04/2021</item>
+        <item>10/04/2021</item>
+    </string-array>
 
 </resources>

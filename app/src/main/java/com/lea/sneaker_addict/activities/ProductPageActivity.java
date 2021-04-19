@@ -40,11 +40,15 @@ public class ProductPageActivity extends AppCompatActivity implements AdapterVie
                 switch (item.getItemId()){
 
                     case R.id.menu_homepage :
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.menu_produit:
+                        return true;
+
+                    case R.id.menu_profil:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         return true;
                 }
                 return false;
@@ -97,5 +101,10 @@ public class ProductPageActivity extends AppCompatActivity implements AdapterVie
 
     public void back(View view){
         startActivity(new Intent(ProductPageActivity.this, AllProductsActivity.class));
+    }
+
+    public void onClickPaiement(View view){
+        Intent intent = new Intent(getApplicationContext(), ConfirmActivity.class);
+        startActivity(intent);
     }
 }

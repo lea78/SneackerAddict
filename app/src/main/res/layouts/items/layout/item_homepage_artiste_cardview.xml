@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             style="@style/nom_artiste_accueil"/>
 
-        <Button
+        <!--<Button
             android:id="@+id/button_voirplus"
             android:layout_width="62dp"
             android:layout_height="30dp"
@@ -41,7 +41,8 @@
             android:textSize="8sp"
             android:padding="0dp"
             android:layout_marginStart="40dp"
-            tools:ignore="SmallSp" />
+            tools:ignore="SmallSp" />-->
+
 
         </LinearLayout>
 

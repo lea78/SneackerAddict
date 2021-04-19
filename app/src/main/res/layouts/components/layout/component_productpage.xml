@@ -195,6 +195,7 @@
                 android:layout_width="330dp"
                 android:layout_height="50dp"
                 android:background="@drawable/background_button"
+                android:onClick="onClickPaiement"
                 android:text="@string/acheter"
                 android:textSize="15sp" />
 
