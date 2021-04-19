@@ -18,12 +18,14 @@
         android:enabled="true"
         android:icon="@drawable/selector_favoris"
         android:title="@string/bottom_nav_menu_fav"
+        android:visible="false"
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/menu_message"
         android:enabled="true"
         android:icon="@drawable/selector_message"
         android:title="@string/bottom_nav_menu_message"
+        android:visible="false"
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/menu_profil"
