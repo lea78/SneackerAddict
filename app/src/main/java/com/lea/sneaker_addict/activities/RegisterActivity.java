@@ -1,11 +1,13 @@
 package com.lea.sneaker_addict.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -25,8 +27,6 @@ import com.lea.sneaker_addict.bdd.RequestHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +35,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextPseudo, editTextMail, editTextPassword;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
+
+    private TextView textViewLogin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,10 +47,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextMail = (EditText) findViewById(R.id.register_mail);
         editTextPassword = (EditText) findViewById(R.id.register_password);
 
+        textViewLogin = (TextView) findViewById(R.id.text_retour_login);
+
         buttonRegister = (Button) findViewById(R.id.button_Inscription);
 
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
+        textViewLogin.setOnClickListener(this);
 
     }
 
@@ -98,5 +103,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         if (view == buttonRegister)
             registerUser();
+        if(view == textViewLogin)
+            Log.i("Activity","onclick");
+            startActivity(new Intent(this, LoginUserActivity.class));
+        Log.i("Activity","onclickafter");
     }
 }
