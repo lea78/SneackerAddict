@@ -28,10 +28,6 @@
         <activity
             android:name=".activities.RegisterActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".activities.ProfilActivity"
@@ -43,39 +39,20 @@
             android:name=".activities.ArtisteActivity"
             android:parentActivityName=".activities.HomePageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
             android:name=".activities.ProductPageActivity"
             android:parentActivityName=".activities.AllProductsActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
             android:name=".activities.AllProductsActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <activity
-            android:name=".activities.LoginActivity"
-            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
 
         <!--
