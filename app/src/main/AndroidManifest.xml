@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sneaker_addict">
 
+        <activity android:name=".activities.HomePageActivity"
+            android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".activities.ArtisteActivity"
+            android:parentActivityName=".activities.HomePageActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,11 +55,19 @@
         <activity android:name=".activities.AdressActivity"
             android:parentActivityName=".activities.ConfirmActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".activities.PaymentActivity"
             android:parentActivityName=".activities.ConfirmActivity"
             android:theme="@style/Theme.Sneaker_addict.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
     </application>

@@ -19,13 +19,14 @@ import com.lea.sneaker_addict.R;
 import java.util.ArrayList;
 
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity implements HomePageArtisteAdapter.OnArtisteListener{
 
     RecyclerView artistesRecycler;
     RecyclerView.Adapter adapter;
 
     RecyclerView basketRecycler;
     RecyclerView.Adapter adapterBasket;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +63,6 @@ public class HomePageActivity extends AppCompatActivity {
 
         basketRecycler = findViewById(R.id.recycler_produits_baskets);
         mBasketRecycler();
-
-
     }
 
     //method to hook features in the recycler
@@ -73,10 +72,10 @@ public class HomePageActivity extends AppCompatActivity {
 
         ArrayList<HomePageArtisteHelper> helperSliderArtistesLocation = new ArrayList<>();
         helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste1, "SneakersAddict"));
-        helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste2, "GirlWithShoes"));
+        helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste2, "SneakyGirl"));
         helperSliderArtistesLocation.add(new HomePageArtisteHelper(R.drawable.artiste3, "Tulip"));
 
-        adapter = new HomePageArtisteAdapter(helperSliderArtistesLocation);
+        adapter = new HomePageArtisteAdapter(helperSliderArtistesLocation, this);
         artistesRecycler.setAdapter(adapter);
     }
 
@@ -92,5 +91,11 @@ public class HomePageActivity extends AppCompatActivity {
 
         adapterBasket = new HomePageShoesAdapter(helperSliderBaskets);
         basketRecycler.setAdapter(adapterBasket);
+    }
+
+    @Override
+    public void onArtisteClick(int position) {
+        Intent intent = new Intent(this, ArtisteActivity.class);
+        startActivity(intent);
     }
 }

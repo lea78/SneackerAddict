@@ -83,5 +83,8 @@ public class ArtisteActivity extends AppCompatActivity {
 
 
     }
-
+    //Method for button back
+    public void back(View view) {
+        startActivity(new Intent(ArtisteActivity.this, HomePageActivity.class));
+    }
 }
