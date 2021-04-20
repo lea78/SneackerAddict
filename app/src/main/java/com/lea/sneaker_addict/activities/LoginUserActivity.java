@@ -3,6 +3,7 @@ package com.lea.sneaker_addict.activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -65,15 +66,21 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                 Constants.URL_LOGIN, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.i("Test", "Debut on response");
                         progressDialog.dismiss();
                         try {
+                            Log.i("Test", response.toString());
                             JSONObject jsonLoginObj = new JSONObject(response);
                             if(!jsonLoginObj.getBoolean("error")){
                                 SharedPrefManager.getInstance(getApplicationContext())
                                     .userLogin(
                                         jsonLoginObj.getInt("idUser"),
                                         jsonLoginObj.getString("pseudoUser"),
-                                        jsonLoginObj.getString("mailUser")
+                                        jsonLoginObj.getString("mailUser"),
+                                        jsonLoginObj.getString("nomUser"),
+                                        jsonLoginObj.getString("prenomUser"),
+                                        jsonLoginObj.getString("passwordUser")
+
                                 );
                                 startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
                                 //Toast.makeText(getApplicationContext(), "user succesfully registered", Toast.LENGTH_LONG).show();
