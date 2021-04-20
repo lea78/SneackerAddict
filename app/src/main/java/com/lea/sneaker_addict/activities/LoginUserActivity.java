@@ -100,17 +100,10 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                     @Override
                     public void onResponse(String response) {
                         progressDialog.dismiss();
-                        Log.i("Test1", response.toString());
-
+                        Log.i("pseudo", response);
                         try {
-
                             JSONObject jsonLoginObj = new JSONObject(response);
-
-                            Log.i("Test", response.toString());
-
                             if(!jsonLoginObj.getBoolean("error")){
-
-                                Log.i("Test", jsonLoginObj.toString());
 
                                 SharedPrefManager.getInstance(getApplicationContext())
                                     .userLogin(

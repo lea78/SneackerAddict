@@ -15,6 +15,7 @@ public class SharedPrefManager {
     private static final String KEY_PSEUDO = "pseudoUser";
     private static final String KEY_MAIL = "mailUser";
     private static final String KEY_USER_ID = "idUser";
+    private static final String KEY_USER_ADRESS = "adresse";
 
     private SharedPrefManager(Context context) {
         ctx = context;
@@ -59,5 +60,18 @@ public class SharedPrefManager {
     public String getPseudo(){
         SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_PSEUDO, null);
+    }
+
+    public boolean isAdress(String adresse){
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_USER_ADRESS, adresse);
+        editor.apply();
+        return true;
+    }
+
+    public String getAdress(){
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_USER_ADRESS, null);
     }
 }

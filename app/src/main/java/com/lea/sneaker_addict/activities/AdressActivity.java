@@ -8,13 +8,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lea.sneaker_addict.R;
+import com.lea.sneaker_addict.bdd.Constants;
+import com.lea.sneaker_addict.bdd.RequestHandler;
+import com.lea.sneaker_addict.bdd.SharedPrefManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class AdressActivity extends AppCompatActivity {
 
@@ -23,14 +35,25 @@ public class AdressActivity extends AppCompatActivity {
     public RadioGroup rAdressGroup;
     public Button button;
     public String str = "";
+    TextView bddAdresse;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adressforshipping);
 
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, LoginUserActivity.class));
+
+        }
+
         rAdressGroup = (RadioGroup) findViewById(R.id.radiogroup);
         button = (Button) findViewById(R.id.button_changer_adresse);
+        bddAdresse = (TextView) findViewById(R.id.bdd_adress);
+
+        getUserAdress();
+        bddAdresse.setText(SharedPrefManager.getInstance(this).getAdress());
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,4 +105,36 @@ public class AdressActivity extends AppCompatActivity {
     public void back(View view) {
         startActivity(new Intent(AdressActivity.this, ConfirmActivity.class));
     }
+
+    public void getUserAdress() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.URL_ADRESSE, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonLoginObj = new JSONObject(response);
+
+                    if (!jsonLoginObj.getBoolean("error")) {
+
+                        SharedPrefManager.getInstance(getApplicationContext()).isAdress(jsonLoginObj.getString("adresse"));
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), jsonLoginObj.getString("message"), Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        );
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+    }
 }
+
