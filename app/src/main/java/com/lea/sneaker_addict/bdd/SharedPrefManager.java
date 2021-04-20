@@ -15,7 +15,7 @@ public class SharedPrefManager {
     private static final String KEY_PSEUDO = "pseudoUser";
     private static final String KEY_MAIL = "mailUser";
     private static final String KEY_USER_ID = "idUser";
-    private static final String KEY_USER_ADRESS = "adresse";
+    public static final String KEY_USER_ADRESS = "adresse";
 
     private SharedPrefManager(Context context) {
         ctx = context;

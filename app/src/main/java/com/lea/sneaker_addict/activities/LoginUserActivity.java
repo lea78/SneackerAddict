@@ -100,7 +100,7 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                     @Override
                     public void onResponse(String response) {
                         progressDialog.dismiss();
-                        Log.i("pseudo", response);
+                        Log.i("Test", response);
                         try {
                             JSONObject jsonLoginObj = new JSONObject(response);
                             if(!jsonLoginObj.getBoolean("error")){

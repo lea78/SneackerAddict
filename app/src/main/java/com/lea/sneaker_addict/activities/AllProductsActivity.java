@@ -20,6 +20,7 @@ public class AllProductsActivity extends AppCompatActivity {
     String nomProd[], dscProd[];
     int images[]={R.drawable.air_force_1,R.drawable.naruto_akatsuki_converse,R.drawable.monopoly_stansmith,
             R.drawable.pizza_vans,R.drawable.ananas,R.drawable.red_dragon_1,R.drawable.hokusai_force1, R.drawable.page_produit_sneakers0};
+
     private AllProductsAdapter.RecyclerViewClickListener listener;
 
     @Override
