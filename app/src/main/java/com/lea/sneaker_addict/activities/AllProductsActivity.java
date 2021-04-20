@@ -18,8 +18,8 @@ public class AllProductsActivity extends AppCompatActivity {
 
     RecyclerView recyclerItem;
     String nomProd[], dscProd[];
-    int images[]={R.drawable.air_force_1,R.drawable.naruto_akatsuki_converse,R.drawable.monopoly_stansmith,
-            R.drawable.pizza_vans,R.drawable.ananas,R.drawable.red_dragon_1,R.drawable.hokusai_force1, R.drawable.page_produit_sneakers0};
+    int images[] = {R.drawable.air_force_1, R.drawable.naruto_akatsuki_converse, R.drawable.monopoly_stansmith,
+            R.drawable.pizza_vans, R.drawable.ananas, R.drawable.red_dragon_1, R.drawable.hokusai_force1, R.drawable.page_produit_sneakers0};
     private AllProductsAdapter.RecyclerViewClickListener listener;
 
     @Override
@@ -34,9 +34,9 @@ public class AllProductsActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
-                    case R.id.menu_homepage :
+                    case R.id.menu_homepage:
                         startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
@@ -61,8 +61,8 @@ public class AllProductsActivity extends AppCompatActivity {
         //Call the method to go to the product page
         setOnClickListener();
 
-        AllProductsAdapter adapterProduit = new AllProductsAdapter(this,nomProd,dscProd,images, listener);
-        GridLayoutManager gridLayoutManagerProduit = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false);
+        AllProductsAdapter adapterProduit = new AllProductsAdapter(this, nomProd, dscProd, images, listener);
+        GridLayoutManager gridLayoutManagerProduit = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerItem.setLayoutManager(gridLayoutManagerProduit);
         recyclerItem.setAdapter(adapterProduit);
 
