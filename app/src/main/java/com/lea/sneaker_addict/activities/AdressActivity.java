@@ -53,8 +53,7 @@ public class AdressActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button_changer_adresse);
         bddAdresse = (TextView) findViewById(R.id.bdd_adress);
 
-        getUserAdress();
-        bddAdresse.setText(SharedPrefManager.getInstance(this).getAdress());
+        bddAdresse.setText(SharedPrefManager.getInstance(this).getAdresse());
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,35 +106,5 @@ public class AdressActivity extends AppCompatActivity {
         startActivity(new Intent(AdressActivity.this, ConfirmActivity.class));
     }
 
-    public void getUserAdress() {
-
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.URL_ADRESSE, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonLoginObj = new JSONObject(response);
-
-                    if (!jsonLoginObj.getBoolean("error")) {
-
-                        SharedPrefManager.getInstance(getApplicationContext()).isAdress(jsonLoginObj.getString("adresse"));
-
-                    } else {
-                        Toast.makeText(getApplicationContext(), jsonLoginObj.getString("message"), Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
-        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
-    }
 }
 
