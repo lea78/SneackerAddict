@@ -27,10 +27,8 @@ public class ProfilActivity extends AppCompatActivity implements View.OnClickLis
         if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, LoginUserActivity.class));
-
         }
         pseudoTextView = (TextView) findViewById(R.id.profil_username);
-
         pseudoTextView.setText(SharedPrefManager.getInstance(this).getPseudo());
 
         buttonDeco = (Button) findViewById(R.id.btn_deco);
