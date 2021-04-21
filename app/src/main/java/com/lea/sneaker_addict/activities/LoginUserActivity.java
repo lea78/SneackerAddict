@@ -79,7 +79,8 @@ public class LoginUserActivity extends AppCompatActivity implements View.OnClick
                                         jsonLoginObj.getString("mailUser"),
                                         jsonLoginObj.getString("nomUser"),
                                         jsonLoginObj.getString("prenomUser"),
-                                        jsonLoginObj.getString("passwordUser")
+                                        jsonLoginObj.getString("passwordUser"),
+                                        jsonLoginObj.getString("adresseUser")
 
                                 );
                                 startActivity(new Intent(getApplicationContext(), ProfilActivity.class));

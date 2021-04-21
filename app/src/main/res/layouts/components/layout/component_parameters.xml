@@ -149,7 +149,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit_mail"
             android:layout_marginLeft="@dimen/margin_general"
-            android:text="Password" />
+            android:text="Password"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/edit_password"
@@ -159,7 +160,8 @@
             android:layout_below="@+id/txt_password_param"
             android:layout_marginLeft="@dimen/margin_general"
             android:layout_marginBottom="@dimen/margin_general"
-            android:hint="@string/modifier" />
+            android:hint="@string/modifier"
+            android:visibility="gone"/>
 
         <!-- ADRESSE -->
         <TextView

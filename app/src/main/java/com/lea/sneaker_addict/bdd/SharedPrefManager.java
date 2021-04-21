@@ -19,6 +19,7 @@ public class SharedPrefManager {
     private static final String KEY_USER_SURNAME = "prenomUser";
     private static final String KEY_USER_PASSWORD = "passwordUser";
     private static final String KEY_USER_AVATAR = "avatarUser";
+    private static final String KEY_USER_ADRESSE = "adresseUser";
 
 
 
@@ -33,7 +34,7 @@ public class SharedPrefManager {
         return instanceShaPM;
     }
 
-    public boolean userLogin(int id, String pseudo, String mail, String nom, String prenom, String password){
+    public boolean userLogin(int id, String pseudo, String mail, String nom, String prenom, String password, String adresse){
     SharedPreferences sharedPreferences = (SharedPreferences) ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
     SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -43,6 +44,7 @@ public class SharedPrefManager {
     editor.putString(KEY_USER_NAME, nom);
     editor.putString(KEY_USER_SURNAME, prenom);
     editor.putString(KEY_USER_PASSWORD, password);
+    editor.putString(KEY_USER_ADRESSE, adresse);
 
     editor.apply();
 
@@ -97,7 +99,7 @@ public class SharedPrefManager {
 
     public String getAdresse(){
         SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(KEY_USER_AVATAR, null);
+        return sharedPreferences.getString(KEY_USER_ADRESSE, null);
     }
 
 }
