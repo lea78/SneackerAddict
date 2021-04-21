@@ -25,11 +25,11 @@ import com.lea.sneaker_addict.bdd.SharedPrefManager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ParametersActivity extends AppCompatActivity{
+public class ParametersActivity extends AppCompatActivity  {
 
-    private ImageView imgAvatar;
-    private Button btnModifier;
-    private EditText editNom, editPrenom, editPseudo, editMail, editPassword, editAdresse;
+
+
+    private EditText editNom, editPrenom, editPseudo, editMail,editAdresse;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,14 +40,11 @@ public class ParametersActivity extends AppCompatActivity{
             finish();
             startActivity(new Intent(this, LoginUserActivity.class));
         }
-        imgAvatar = (ImageView) findViewById(R.id.avatar_artiste_pg_param);
-        btnModifier = (Button) findViewById(R.id.btn_modif_param);
 
         editNom = (EditText) findViewById(R.id.edit_nom);
         editPrenom = (EditText) findViewById(R.id.edit_prenom);
         editPseudo = (EditText) findViewById(R.id.edit_pseudo);
         editMail = (EditText) findViewById(R.id.edit_mail);
-        editPassword = (EditText) findViewById(R.id.edit_password);
         editAdresse = (EditText) findViewById(R.id.edit_adresse);
 
         editPseudo.setText(SharedPrefManager.getInstance(this).getPseudo());
