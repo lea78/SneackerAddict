@@ -60,7 +60,8 @@ public class ConfirmActivity extends AppCompatActivity {
     }
 
     public void onClickAdress(View view) {
-
+        Intent intent = new Intent(getApplicationContext(), AdressActivity.class);
+        startActivity(intent);
     }
 
     public void onClickPayment(View view){
