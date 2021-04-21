@@ -51,7 +51,7 @@ public class HomePageActivity extends AppCompatActivity implements HomePageArtis
                         return true;
 
                     case R.id.menu_profil:
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        startActivity(new Intent(getApplicationContext(), LoginUserActivity.class));
                         return true;
                 }
                 return false;

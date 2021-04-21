@@ -102,4 +102,11 @@ public class SharedPrefManager {
         return sharedPreferences.getString(KEY_USER_ADRESSE, null);
     }
 
+    public boolean isAdress(String adresse){
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_USER_ADRESS, adresse);
+        editor.apply();
+        return true;
+    }
 }
