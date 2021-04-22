@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lea.sneaker_addict.R;
+import com.lea.sneaker_addict.bdd.SharedPrefManager;
 
 public class ConfirmActivity extends AppCompatActivity {
 
@@ -24,6 +25,12 @@ public class ConfirmActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
+
+        if(!SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, ProfilActivity.class));
+        }
+
 
         //Set the choosen option inside card view
         newAdress = (TextView)findViewById(R.id.adresse_livraison_1);
@@ -72,6 +79,7 @@ public class ConfirmActivity extends AppCompatActivity {
     }
 
     public void onClickAlertDialog(View view){
+
         AlertDialog.Builder paiementDialog = new AlertDialog.Builder(this);
         paiementDialog.setTitle("Merci pour l'achat !");
         paiementDialog.setMessage("Votre commande a été envoyée à l'artiste.");
